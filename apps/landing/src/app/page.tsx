@@ -1,20 +1,19 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center max-w-5xl font-[family-name:var(--font-geist-mono)] text-white  gap-16">
+    <div className="flex flex-col items-center justify-center max-w-5xl font-[family-name:var(--font-geist-mono)] text-slate-12  gap-16">
       <nav className="flex flex-row items-center justify-between w-full ">
         <h1 className="text-2xl font-bold">
           <Link href="/">Vita</Link>
         </h1>
       </nav>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start pt-8">
-        <h2 className="text-2xl font-semibold flex flex-row gap-2 border-l-2 border-orange-500 pl-4">
+        <h2 className="text-2xl font-semibold flex flex-row gap-2 border-l-2 border-orange-9 pl-4">
           <span>The system that makes you live</span>
-          <span className="text-orange-500 font-bold">Longer</span>
+          <span className="text-orange-9 font-bold">Longer</span>
           <span className="font-bold">+</span>
-          <span className="text-orange-500 font-bold">Better</span>
+          <span className="text-orange-9 font-bold">Better</span>
         </h2>
         <div className="flex flex-col gap-4">
           <p>
@@ -23,57 +22,51 @@ export default function Home() {
           </p>
           <p>
             All your{" "}
-            <span className="text-gray-100 font-semibold">
-              daily activities
-            </span>{" "}
+            <span className="text-slate-12 font-bold">daily activities</span>{" "}
             are automatically{" "}
-            <span className="text-gray-100 font-semibold">
+            <span className="text-slate-12 font-bold">
               tracked and analyzed
             </span>
             . With the latest in{" "}
-            <span className="text-gray-100 font-semibold">AI and science</span>,
-            you discover{" "}
-            <span className="text-gray-100 font-semibold">
-              trends and cycles
-            </span>{" "}
+            <span className="text-slate-12 font-bold">AI and science</span>, you
+            discover{" "}
+            <span className="text-slate-12 font-bold">trends and cycles</span>{" "}
             with predictive suggestions to{" "}
-            <span className="text-gray-100 font-semibold">
+            <span className="text-slate-12 font-bold">
               maximize your progress
             </span>
             .
           </p>
           <p>
             And we&apos;re{" "}
-            <span className="text-gray-100 font-semibold">
-              fully open source
-            </span>
-            , so any code that touches your data can be viewed publicly and
+            <span className="text-slate-12 font-bold">fully open source</span>,
+            so any code that touches your data can be viewed publicly and
             verified independently.
           </p>
         </div>
         <div className="flex flex-col gap-2">
           <p>
-            <span className="text-gray-100 font-semibold">Trackables:</span>{" "}
+            <span className="text-slate-11 font-semibold">Trackables:</span>{" "}
           </p>
           <p className="flex flex-row gap-2 items-start">
-            <span className="text-3xl">*</span>{" "}
-            <span className="text-blue-500 font-semibold">Heart Rate</span>
+            <span className="text-3xl font-thin">*</span>{" "}
+            <span className="text-blue-9 font-semibold">Heart Rate</span>
           </p>
           <p className="flex flex-row gap-2 items-start">
-            <span className="text-3xl">*</span>{" "}
-            <span className="text-blue-500 font-semibold">Sleep Quality</span>
+            <span className="text-3xl font-thin">*</span>{" "}
+            <span className="text-blue-9 font-semibold">Sleep Quality</span>
           </p>
           <p className="flex flex-row gap-2 items-start">
-            <span className="text-3xl">*</span>{" "}
-            <span className="text-blue-500 font-semibold">Workouts</span>
+            <span className="text-3xl font-thin">*</span>{" "}
+            <span className="text-blue-9 font-semibold">Workouts</span>
           </p>
           <p className="flex flex-row gap-2 items-start">
-            <span className="text-3xl">*</span>{" "}
-            <span className="text-blue-500 font-semibold">App usage</span>
+            <span className="text-3xl font-thin">*</span>{" "}
+            <span className="text-blue-9 font-semibold">App usage</span>
           </p>
           <p className="flex flex-row gap-2 items-start">
-            <span className="text-3xl">*</span>{" "}
-            <span className="text-blue-500 font-semibold">Journals</span>
+            <span className="text-3xl font-thin">*</span>{" "}
+            <span className="text-blue-9 font-semibold">Journals</span>
           </p>
         </div>
       </main>

@@ -1,24 +1,104 @@
 import type { Config } from "tailwindcss";
 
+import twanimate from "tailwindcss-animate";
+
 export default {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-  	extend: {
-  		colors: {
-  			background: 'var(--background)',
-  			foreground: 'var(--foreground)'
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		}
-  	}
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        orange: {
+          1: "var(--orange-1)",
+          2: "var(--orange-2)",
+          3: "var(--orange-3)",
+          4: "var(--orange-4)",
+          5: "var(--orange-5)",
+          6: "var(--orange-6)",
+          7: "var(--orange-7)",
+          8: "var(--orange-8)",
+          9: "var(--orange-9)",
+          10: "var(--orange-10)",
+          11: "var(--orange-11)",
+          12: "var(--orange-12)",
+          a1: "var(--orange-a1)",
+          a2: "var(--orange-a2)",
+          a3: "var(--orange-a3)",
+          a4: "var(--orange-a4)",
+          a5: "var(--orange-a5)",
+          a6: "var(--orange-a6)",
+          a7: "var(--orange-a7)",
+          a8: "var(--orange-a8)",
+          a9: "var(--orange-a9)",
+          a10: "var(--orange-a10)",
+          a11: "var(--orange-a11)",
+          a12: "var(--orange-a12)",
+        },
+        blue: {
+          1: "var(--blue-1)",
+          2: "var(--blue-2)",
+          3: "var(--blue-3)",
+          4: "var(--blue-4)",
+          5: "var(--blue-5)",
+          6: "var(--blue-6)",
+          7: "var(--blue-7)",
+          8: "var(--blue-8)",
+          9: "var(--blue-9)",
+          10: "var(--blue-10)",
+          11: "var(--blue-11)",
+          12: "var(--blue-12)",
+          a1: "var(--blue-a1)",
+          a2: "var(--blue-a2)",
+          a3: "var(--blue-a3)",
+          a4: "var(--blue-a4)",
+          a5: "var(--blue-a5)",
+          a6: "var(--blue-a6)",
+          a7: "var(--blue-a7)",
+          a8: "var(--blue-a8)",
+          a9: "var(--blue-a9)",
+          a10: "var(--blue-a10)",
+          a11: "var(--blue-a11)",
+          a12: "var(--blue-a12)",
+        },
+        slate: {
+          1: "var(--slate-1)",
+          2: "var(--slate-2)",
+          3: "var(--slate-3)",
+          4: "var(--slate-4)",
+          5: "var(--slate-5)",
+          6: "var(--slate-6)",
+          7: "var(--slate-7)",
+          8: "var(--slate-8)",
+          9: "var(--slate-9)",
+          10: "var(--slate-10)",
+          11: "var(--slate-11)",
+          12: "var(--slate-12)",
+          a1: "var(--slate-a1)",
+          a2: "var(--slate-a2)",
+          a3: "var(--slate-a3)",
+          a4: "var(--slate-a4)",
+          a5: "var(--slate-a5)",
+          a6: "var(--slate-a6)",
+          a7: "var(--slate-a7)",
+          a8: "var(--slate-a8)",
+          a9: "var(--slate-a9)",
+          a10: "var(--slate-a10)",
+          a11: "var(--slate-a11)",
+          a12: "var(--slate-a12)",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+    },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [twanimate],
 } satisfies Config;

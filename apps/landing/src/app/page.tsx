@@ -11,7 +11,7 @@ export default function Home() {
       </nav>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start pt-8">
         <h2 className="text-2xl font-semibold flex flex-wrap md:flex-row gap-2 border-l-2 border-orange-9 pl-4">
-          <span>The system to live</span>
+          <span>Open Source Longevity Operating System</span>
           <span className="text-orange-9 font-bold">Longer</span>
           <span className="font-bold">+</span>
           <span className="text-orange-9 font-bold">Sharper</span>
@@ -42,9 +42,9 @@ export default function Home() {
             .
           </p>
           <p>
-            And we&apos;re{" "}
-            <span className="text-slate-12 font-bold">fully open source</span>,
-            any code that touches your data can be viewed publicly and verified
+            Being{" "}
+            <span className="text-slate-12 font-bold">Open Source</span> not only protects your privacy, but helps us build a new health focused ecosystem to drive the next generations beyond current expectations.
+Any code that touches your data can be viewed publicly and verified
             independently.
           </p>
         </div>

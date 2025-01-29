@@ -2,12 +2,7 @@
 
 import { AlertCircle, TrendingUp } from "lucide-react";
 import {
-  Area,
-  AreaChart,
-  Bar,
-  BarChart,
   CartesianGrid,
-  ComposedChart,
   Line,
   LineChart,
   ResponsiveContainer,

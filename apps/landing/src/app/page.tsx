@@ -10,7 +10,7 @@ export default function Home() {
         </h1>
       </nav>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start pt-8">
-        <h2 className="text-2xl font-semibold flex flex-row gap-2 border-l-2 border-orange-9 pl-4">
+        <h2 className="text-2xl font-semibold flex flex-wrap md:flex-row gap-2 border-l-2 border-orange-9 pl-4">
           <span>The system to live</span>
           <span className="text-orange-9 font-bold">Longer</span>
           <span className="font-bold">+</span>

@@ -229,7 +229,7 @@ export function Chart() {
         <CardDescription>Vitality over the last 3 months</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           <div className="flex flex-col gap-0">
             <p className="text-sm font-light">Sleep</p>
             <ChartContainer config={chartConfig}>

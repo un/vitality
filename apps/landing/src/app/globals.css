@@ -10,6 +10,38 @@
 @import "@radix-ui/colors/blue-alpha.css";
 @import "@radix-ui/colors/blue-dark.css";
 @import "@radix-ui/colors/blue-dark-alpha.css";
+@import "@radix-ui/colors/amber.css";
+@import "@radix-ui/colors/amber-alpha.css";
+@import "@radix-ui/colors/amber-dark.css";
+@import "@radix-ui/colors/amber-dark-alpha.css";
+@import "@radix-ui/colors/red.css";
+@import "@radix-ui/colors/red-alpha.css";
+@import "@radix-ui/colors/red-dark.css";
+@import "@radix-ui/colors/red-dark-alpha.css";
+@import "@radix-ui/colors/pink.css";
+@import "@radix-ui/colors/pink-alpha.css";
+@import "@radix-ui/colors/pink-dark.css";
+@import "@radix-ui/colors/pink-dark-alpha.css";
+@import "@radix-ui/colors/violet.css";
+@import "@radix-ui/colors/violet-alpha.css";
+@import "@radix-ui/colors/violet-dark.css";
+@import "@radix-ui/colors/violet-dark-alpha.css";
+@import "@radix-ui/colors/jade.css";
+@import "@radix-ui/colors/jade-alpha.css";
+@import "@radix-ui/colors/jade-dark.css";
+@import "@radix-ui/colors/jade-dark-alpha.css";
+@import "@radix-ui/colors/grass.css";
+@import "@radix-ui/colors/grass-alpha.css";
+@import "@radix-ui/colors/grass-dark.css";
+@import "@radix-ui/colors/grass-dark-alpha.css";
+@import "@radix-ui/colors/mint.css";
+@import "@radix-ui/colors/mint-alpha.css";
+@import "@radix-ui/colors/mint-dark.css";
+@import "@radix-ui/colors/mint-dark-alpha.css";
+@import "@radix-ui/colors/sky.css";
+@import "@radix-ui/colors/sky-alpha.css";
+@import "@radix-ui/colors/sky-dark.css";
+@import "@radix-ui/colors/sky-dark-alpha.css";
 
 @tailwind base;
 @tailwind components;
@@ -22,5 +54,23 @@ body {
 @layer base {
   :root {
     --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  :root {
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }

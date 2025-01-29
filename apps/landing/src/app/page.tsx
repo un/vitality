@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center max-w-5xl font-[family-name:var(--font-geist-mono)] text-slate-12 gap-16 p-16">
+    <div className="flex flex-col items-center justify-center max-w-5xl font-[family-name:var(--font-geist-mono)] text-slate-12 gap-16 p-6 md:p-16">
       <nav className="flex flex-row items-center justify-between w-full ">
         <h1 className="text-2xl font-bold">
           <Link href="/">Vita</Link>
@@ -56,27 +56,27 @@ export default function Home() {
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Heart Rate</span>
+              <span className="text-blue-11 font-semibold">Heart Rate</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Sleep Quality</span>
+              <span className="text-blue-11 font-semibold">Sleep Quality</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Workouts</span>
+              <span className="text-blue-11 font-semibold">Workouts</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">App usage</span>
+              <span className="text-blue-11 font-semibold">App usage</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Journals</span>
+              <span className="text-blue-11 font-semibold">Journals</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Manual Data</span>
+              <span className="text-blue-11 font-semibold">Manual Data</span>
             </p>
           </div>
 
@@ -86,27 +86,27 @@ export default function Home() {
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Health Metrics</span>
+              <span className="text-blue-11 font-semibold">Health Metrics</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Motivation</span>
+              <span className="text-blue-11 font-semibold">Motivation</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Productivity</span>
+              <span className="text-blue-11 font-semibold">Productivity</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Focus</span>
+              <span className="text-blue-11 font-semibold">Focus</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Mood</span>
+              <span className="text-blue-11 font-semibold">Mood</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Targets</span>
+              <span className="text-blue-11 font-semibold">Targets</span>
             </p>
           </div>
 
@@ -116,29 +116,29 @@ export default function Home() {
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">
+              <span className="text-blue-11 font-semibold">
                 Negative Patterns
               </span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Health Issues</span>
+              <span className="text-blue-11 font-semibold">Health Issues</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Hyper Focus</span>
+              <span className="text-blue-11 font-semibold">Hyper Focus</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Energy Boosts</span>
+              <span className="text-blue-11 font-semibold">Energy Boosts</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Happiness</span>
+              <span className="text-blue-11 font-semibold">Happiness</span>
             </p>
             <p className="flex flex-row gap-2 items-start">
               <span className="text-3xl font-thin">*</span>{" "}
-              <span className="text-blue-9 font-semibold">Burnout</span>
+              <span className="text-blue-11 font-semibold">Burnout</span>
             </p>
           </div>
         </div>

@@ -1,4 +1,6 @@
 import { Chart } from "@/components/chart";
+import { HomePitch } from "@/components/home-pitch";
+
 import Link from "next/link";
 
 export default function Home() {
@@ -10,13 +12,16 @@ export default function Home() {
         </h1>
       </nav>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start pt-8">
-        <h2 className="text-2xl font-semibold flex flex-wrap md:flex-row gap-2 border-l-2 border-orange-9 pl-4">
+        <h2 className="text-2xl font-semibold flex flex-wrap md:flex-row gap-2 border-l-2 border-orange-9 pl-4 bg-orange-1 rounded-lg rounded-l-none">
           <span>Open Source Longevity Operating System</span>
-          <span className="text-orange-9 font-bold">Longer</span>
-          <span className="font-bold">+</span>
-          <span className="text-orange-9 font-bold">Sharper</span>
-          <span className="font-bold">+</span>
-          <span className="text-orange-9 font-bold">Better</span>
+          <span className="flex flex-wrap gap-2">
+            <span className="text-slate-11">Live</span>
+            <span className="text-orange-9 font-bold">Longer</span>
+            <span className=" text-slate-11">+</span>
+            <span className="text-orange-9 font-bold">Sharper</span>
+            <span className="text-slate-11">+</span>
+            <span className="text-orange-9 font-bold">Better</span>
+          </span>
         </h2>
         <div className="flex flex-col gap-4">
           <p>
@@ -30,11 +35,13 @@ export default function Home() {
             <span className="text-slate-12 font-bold">
               tracked and analyzed
             </span>
-            . We use{" "}
-            <span className="text-slate-12 font-bold">AI and science</span> to
-            help you discover{" "}
+            .
+          </p>
+          <p>
+            We use help you discover{" "}
             <span className="text-slate-12 font-bold">trends and cycles</span>
             {", "}
+            <br />
             predictively suggesting changes to{" "}
             <span className="text-slate-12 font-bold">
               maximize your progress
@@ -42,12 +49,17 @@ export default function Home() {
             .
           </p>
           <p>
-            Being{" "}
-            <span className="text-slate-12 font-bold">Open Source</span> not only protects your privacy, but helps us build a new health focused ecosystem to drive the next generations beyond current expectations.
-Any code that touches your data can be viewed publicly and verified
-            independently.
+            <span className="text-slate-12 font-bold">Open Source</span> lets us
+            build a new{" "}
+            <span className="text-slate-12 font-bold">
+              open health ecosystem
+            </span>{" "}
+            <br />
+            focused on accelerating longevity and vitality, while protecting
+            your data and privacy.
           </p>
         </div>
+        <HomePitch />
 
         <div className="grid grid-cols-1 gap-4 w-full md:grid-cols-3">
           <div className="flex flex-wrap md:flex-col gap-2">
@@ -141,6 +153,26 @@ Any code that touches your data can be viewed publicly and verified
               <span className="text-blue-11 font-semibold">Burnout</span>
             </p>
           </div>
+        </div>
+        <div className="flex flex-col gap-2 text-sm">
+          <span className="">
+            <span className="text-slate-11 font-bold">Auto Capture:</span>{" "}
+            Adaptors for any device, sensor or input source; including APIs and
+            physical click buttons. GPS geolocation tracking for events (If
+            within area of gym, log workout).
+          </span>
+          <span className="">
+            <span className="text-slate-11 font-bold">Data Analysis:</span>{" "}
+            Upload of medical data and tests such as genetics, blood, dexascan
+            to fine tune your suggestions and predictions.
+          </span>
+          <span className="">
+            <span className="text-slate-11 font-bold">
+              Up to date guidance:
+            </span>{" "}
+            Largest continually updated knowledge base of scientific papers,
+            methodologies, and insights fed into your custom guidance system.
+          </span>
         </div>
         <Chart />
       </main>

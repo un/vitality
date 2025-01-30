@@ -1,5 +1,6 @@
 import { Chart } from "@/components/chart";
 import { HomePitch } from "@/components/home-pitch";
+import { Waitlist } from "@/components/waitlist";
 
 import Link from "next/link";
 
@@ -60,7 +61,7 @@ export default function Home() {
           </p>
         </div>
         <HomePitch />
-
+        <Waitlist />
         <div className="grid grid-cols-1 gap-4 w-full md:grid-cols-3">
           <div className="flex flex-wrap md:flex-col gap-2">
             <p>

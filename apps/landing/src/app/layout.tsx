@@ -27,6 +27,21 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Augment",
+    description: "The Open Source system to live Longer + Sharper + Better",
+    creator: "@augmentday",
+    site: "https://augment.day",
+    images: [
+      {
+        url: "./og.png",
+      },
+    ],
+  },
+  icons: {
+    icon: "./favicon.png",
+  },
 };
 
 export default function RootLayout({

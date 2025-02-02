@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import Link from "next/link";
+import { AudioPlayer } from "./audio-player";
 
 export function HomePitch() {
   const [showPitch, setShowPitch] = useState(false);
@@ -9,17 +9,13 @@ export function HomePitch() {
   return (
     <>
       <div className="flex flex-col md:flex-row gap-4">
-        <Button asChild>
-          <Link href="./vitaintro-comp.mp3" target="_blank">
-            Hear the pitch
-          </Link>
-        </Button>
         <Button onClick={() => setShowPitch(!showPitch)}>
-          {showPitch ? "Hide the pitch" : "Read the pitch"}
+          {showPitch ? "Hide the pitch" : "Show the pitch"}
         </Button>
       </div>
       {showPitch && (
         <div className="flex flex-col gap-4 ml-8 border-l-2 border-slate-9 pl-4 bg-slate-1 rounded-lg rounded-l-none italic text-sm">
+          <AudioPlayer />
           <p>
             <span>&ldquo;</span> Before the invention of GPS navigation,
             we&apos;d use paper maps. You had to pre-plan your journey, follow

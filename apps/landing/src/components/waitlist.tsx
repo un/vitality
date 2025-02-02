@@ -21,69 +21,134 @@ import {
   FormLabel,
   FormMessage,
 } from "./ui/form";
-
-const waitlistSchema = z.object({
-  name: z.string().min(1),
-  email: z.string().email(),
-});
+import { waitlistSchema } from "@/app/actions/join-waitlist-schema";
+import { addToWaitlist } from "@/app/actions/join-waitlist";
+import { useAction } from "next-safe-action/hooks";
+import { useState } from "react";
+import { StarGithub } from "./star-github";
+import { JoinDiscord } from "./join-discord";
+import { Share } from "lucide-react";
 
 export function Waitlist() {
+  const [waiting, setWaiting] = useState(false);
+  const [shared, setShared] = useState(false);
+
+  const { execute, result, isPending, hasErrored } = useAction(addToWaitlist, {
+    onSuccess: () => {
+      setWaiting(true);
+    },
+    onError: ({}) => {
+      setWaiting(false);
+    },
+  });
   const form = useForm<z.infer<typeof waitlistSchema>>({
     resolver: zodResolver(waitlistSchema),
   });
-  function onSubmit(values: z.infer<typeof waitlistSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof waitlistSchema>) {
+    execute(values);
+  }
+
+  function handleShare() {
+    navigator.clipboard.writeText(
+      `I've joined the Augment waitlist to live longer, sharper, and better.\nI'm in waitlist position ${result?.data?.data?.position}, get yours at: https://augment.day and join the movement!`
+    );
+    setShared(true);
   }
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="primary">Join the waitlist</Button>
+        <Button variant="primary">Join Augment Waitlist</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Join the waitlist</DialogTitle>
+          <DialogTitle>Join Augment Waitlist</DialogTitle>
           <DialogDescription>
-            Get early access to the Longevity Operating System.
+            {!waiting && (
+              <p>Be among the first people to Augment their life.</p>
+            )}
+
+            {result?.data?.error && (
+              <p className="text-sm text-red-500">{result?.data?.error}</p>
+            )}
+            {hasErrored && (
+              <>
+                <p className="text-sm text-red-500">Something went wrong</p>
+                <p className="text-sm text-red-500">{result?.serverError}</p>
+              </>
+            )}
           </DialogDescription>
         </DialogHeader>
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-2"
-          >
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="John McLiveForever" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="John@150yrsold.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <DialogFooter>
-              <Button type="submit">Join</Button>
-            </DialogFooter>
-          </form>
-        </Form>
+        {!waiting && (
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="flex flex-col gap-2"
+            >
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="John McLiveForever" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input placeholder="John@150yrsold.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <DialogFooter>
+                <Button disabled={isPending} type="submit">
+                  {isPending ? "Joining..." : "Join"}
+                </Button>
+              </DialogFooter>
+            </form>
+          </Form>
+        )}
+        {waiting && (
+          <>
+            <div className="flex flex-col gap-4 items-center pb-8 pt-4">
+              <p className="text-sm text-slate-11 text-center">
+                You&apos;re gonna be among the first people to Augment their
+                life.
+              </p>
+              <p className="">Your position on the waitlist is </p>
+              <span className=" text-5xl text-bold text-slate-11">
+                {result?.data?.data?.position}
+              </span>
+              <span className=" text-5xl text-bold text-slate-11">🎉</span>
+              <p className="text-sm text-slate-11 text-center">
+                Help us spread the message and all live longer, sharper, and
+                better.
+              </p>
+            </div>
+            <Button onClick={handleShare}>
+              <div className="flex items-center gap-4">
+                <Share className="w-4 h-4" /> Share
+              </div>
+            </Button>
+            {shared && (
+              <p className="text-sm text-green-500 text-center">
+                Message copied to your clipboard!
+              </p>
+            )}
+            <StarGithub />
+            <JoinDiscord />
+          </>
+        )}
       </DialogContent>
     </Dialog>
   );

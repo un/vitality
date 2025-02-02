@@ -14,8 +14,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vitality",
-  description: "makes you live Longer + Sharper + Better",
+  title: "Augment",
+  description: "Augment makes you live Longer + Sharper + Better",
+  openGraph: {
+    title: "Augment",
+    description: "The Open Source system to live Longer + Sharper + Better",
+    url: "https://augment.day",
+    siteName: "Augment",
+    images: [
+      {
+        url: "./og.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-2`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-2 font-[family-name:var(--font-geist-mono)] dark`}
       >
         <ThemeProvider
           attribute="class"

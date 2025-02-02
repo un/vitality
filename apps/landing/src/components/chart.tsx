@@ -226,17 +226,72 @@ export function Chart() {
             </div>
           </div>
         </CardTitle>
-        <CardDescription>Vitality over the last 3 months</CardDescription>
+        <CardDescription>
+          <div className="flex flex-col gap-2">
+            <Alert>
+              <TrendingUp className="h-4 w-4" />
+              <AlertTitle>New 10 Day Trend!</AlertTitle>
+              <AlertDescription>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <div className="border border-green-7 rounded-lg p-2">
+                    Work trend improved by{" "}
+                    <span className="font-bold">+32.5%</span>
+                  </div>
+                  <div className="border border-green-7 rounded-lg p-2">
+                    Mood trend improved by{" "}
+                    <span className="font-bold">42.7%</span>.
+                  </div>
+                  <div className="border border-green-7 rounded-lg p-2">
+                    Sleep quality improved{" "}
+                    <span className="font-bold">+12.5%</span>
+                  </div>
+                  <div className="border border-green-7 rounded-lg p-2">
+                    RHR has decreased by{" "}
+                    <span className="font-bold">-1.2%</span>
+                  </div>
+                </div>
+                <p>
+                  <span className="font-bold text-slate-11">SarAi</span>:
+                </p>
+                <p>
+                  Improvements are correlated with your increase in movement,
+                  water and protein consumption, and decrease in alcohol and
+                  carbs.
+                </p>
+                <p>
+                  New estimated life expectancy is{" "}
+                  <span className="font-bold">125 years</span>
+                </p>
+              </AlertDescription>
+            </Alert>
+            <Alert variant="destructive">
+              <AlertCircle className="h-4 w-4" />
+              <AlertTitle>Burnout Risk Detected</AlertTitle>
+              <AlertDescription>
+                <p>
+                  <span className="font-bold text-red-11">SarAi</span>:
+                </p>
+                <p>
+                  Your hours in meetings has increased and general activity is
+                  at an all time high.
+                </p>
+                <p>Ensure you are taking enough time to relax and recover.</p>
+                <p>
+                  Your current burnout risk is{" "}
+                  <span className="font-bold">12.5%</span>
+                </p>
+              </AlertDescription>
+            </Alert>
+          </div>
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           <div className="flex flex-col gap-0">
             <p className="text-sm font-light">Sleep</p>
             <ChartContainer config={chartConfig}>
-              <ResponsiveContainer width="100%" height={200}>
+              <ResponsiveContainer height={200}>
                 <LineChart
-                  width={500}
-                  height={200}
                   data={chartData}
                   syncId="chartSync"
                   margin={{
@@ -301,10 +356,8 @@ export function Chart() {
           <div className="flex flex-col gap-0">
             <p className="text-sm font-light">Movement</p>
             <ChartContainer config={chartConfig}>
-              <ResponsiveContainer width="100%" height={200}>
+              <ResponsiveContainer height={200}>
                 <LineChart
-                  width={500}
-                  height={200}
                   data={chartData}
                   syncId="chartSync"
                   margin={{
@@ -407,10 +460,8 @@ export function Chart() {
           <div className="flex flex-col gap-0">
             <p className="text-sm font-light">Food</p>
             <ChartContainer config={chartConfig}>
-              <ResponsiveContainer width="100%" height={200}>
+              <ResponsiveContainer height={200}>
                 <LineChart
-                  width={500}
-                  height={200}
                   data={chartData}
                   syncId="chartSync"
                   margin={{
@@ -517,10 +568,8 @@ export function Chart() {
           <div className="flex flex-col gap-0">
             <p className="text-sm font-light">Work</p>
             <ChartContainer config={chartConfig}>
-              <ResponsiveContainer width="100%" height={200}>
+              <ResponsiveContainer height={200}>
                 <LineChart
-                  width={500}
-                  height={200}
                   data={chartData}
                   syncId="chartSync"
                   margin={{
@@ -585,10 +634,8 @@ export function Chart() {
             <p className="text-sm font-light">Mind</p>
 
             <ChartContainer config={chartConfig}>
-              <ResponsiveContainer width="100%" height={200}>
+              <ResponsiveContainer height={200}>
                 <LineChart
-                  width={500}
-                  height={200}
                   data={chartData}
                   syncId="chartSync"
                   margin={{
@@ -651,245 +698,7 @@ export function Chart() {
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex flex-col gap-2">
-        <Alert>
-          <TrendingUp className="h-4 w-4" />
-          <AlertTitle>New 10 Day Trend!</AlertTitle>
-          <AlertDescription>
-            <p>
-              <span className="font-bold text-slate-11">SarAi</span>:
-            </p>
-            <p>
-              Your Work trend has improved by{" "}
-              <span className="font-bold">+32.5%</span> and your Mood trend has
-              improved by <span className="font-bold">42.7%</span>.
-            </p>
-            <p>
-              This seems to be tied to your increase in movement, water and
-              protein consumption, combined with decrease in alcohol and carbs.
-            </p>
-            <p>
-              Your sleep quality has improved by{" "}
-              <span className="font-bold">+12.5%</span>
-            </p>
-            <p>
-              Your RHR has decreased by <span className="font-bold">+1.2%</span>
-            </p>
-            <p>
-              Your new estimated life expectancy is{" "}
-              <span className="font-bold">125 years</span>
-            </p>
-          </AlertDescription>
-        </Alert>
-        <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
-          <AlertTitle>Burnout Risk Detected</AlertTitle>
-          <AlertDescription>
-            <p>
-              <span className="font-bold text-red-11">SarAi</span>:
-            </p>
-            <p>
-              Your hours in meetings has increased and general activity is at an
-              all time high.
-            </p>
-            <p>Ensure you are taking enough time to relax and recover.</p>
-            <p>
-              Try taking a hike in nature or attend the Open Source meetup in
-              San Francisco in 3 days. Event link is here.
-            </p>
-            <p>
-              Your current burnout risk is{" "}
-              <span className="font-bold">12.5%</span>
-            </p>
-          </AlertDescription>
-        </Alert>
-      </CardFooter>
+      <CardFooter className="flex flex-col gap-2"></CardFooter>
     </Card>
   );
 }
-
-// "use client";
-
-// import { TrendingUp } from "lucide-react";
-// import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
-
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardFooter,
-//   CardHeader,
-//   CardTitle,
-// } from "@/components/ui/card";
-// import {
-//   ChartConfig,
-//   ChartContainer,
-//   ChartTooltip,
-//   ChartTooltipContent,
-// } from "@/components/ui/chart";
-// const chartData = [
-//   { month: "January", desktop: 186, mobile: 80 },
-//   { month: "February", desktop: 305, mobile: 200 },
-//   { month: "March", desktop: 237, mobile: 120 },
-//   { month: "April", desktop: 73, mobile: 190 },
-//   { month: "May", desktop: 209, mobile: 130 },
-//   { month: "June", desktop: 214, mobile: 140 },
-// ];
-
-// const chartConfig = {
-//   desktop: {
-//     label: "Desktop",
-//     color: "hsl(var(--chart-1))",
-//   },
-//   mobile: {
-//     label: "Mobile",
-//     color: "hsl(var(--chart-2))",
-//   },
-// } satisfies ChartConfig;
-
-// export function Component() {
-//   return (
-//     <Card>
-//       <CardHeader>
-//         <CardTitle>Bar Chart - Multiple</CardTitle>
-//         <CardDescription>January - June 2024</CardDescription>
-//       </CardHeader>
-//       <CardContent>
-//         <ChartContainer config={chartConfig}>
-//           <BarChart accessibilityLayer data={chartData}>
-//             <CartesianGrid vertical={false} />
-//             <XAxis
-//               dataKey="month"
-//               tickLine={false}
-//               tickMargin={10}
-//               axisLine={false}
-//               tickFormatter={(value) => value.slice(0, 3)}
-//             />
-//             <ChartTooltip
-//               cursor={false}
-//               content={<ChartTooltipContent indicator="dashed" />}
-//             />
-//             <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-//             <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
-//           </BarChart>
-//         </ChartContainer>
-//       </CardContent>
-//       <CardFooter className="flex-col items-start gap-2 text-sm">
-//         <div className="flex gap-2 font-medium leading-none">
-//           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-//         </div>
-//         <div className="leading-none text-muted-foreground">
-//           Showing total visitors for the last 6 months
-//         </div>
-//       </CardFooter>
-//     </Card>
-//   );
-// }
-
-// function generateHealthData(days: number) {
-//   const data = [];
-//   let alcoholEffect = 0;
-//   let cumulativePositiveEffect = 0;
-
-//   // Base ranges for variables
-//   const ranges = {
-//     sleep: { min: 5, max: 8.5 },
-//     sleepQ: { min: 60, max: 98 },
-//     steps: { min: 3000, max: 15000 },
-//     workout: { min: 0, max: 90 },
-//     calories: { min: 600, max: 2500 },
-//     carbs: { min: 50, max: 350 },
-//     protein: { min: 80, max: 400 },
-//     water: { min: 2000, max: 5000 },
-//     alcohol: { min: 0, max: 2500 },
-//     meetings: { min: 2, max: 8 },
-//     productivity: { min: 65, max: 150 },
-//     focus: { min: 60, max: 150 },
-//     mood: { min: 60, max: 150 },
-//     rhr: { min: 62, max: 75 },
-//   };
-
-//   // Generate data for each day
-//   for (let i = 0; i < days; i++) {
-//     // Gradually decrease negative habits over time
-//     const timeProgress = i / days;
-//     const negativeHabitProbability = Math.max(0.1, 1 - timeProgress * 1.2);
-
-//     // Calculate alcohol consumption with decreasing probability
-//     const hasAlcohol = Math.random() < negativeHabitProbability;
-//     const alcoholAmount = hasAlcohol ? Math.random() * ranges.alcohol.max : 0;
-
-//     // Update alcohol effect (3-day lag)
-//     alcoholEffect = Math.max(
-//       0,
-//       alcoholEffect * 0.7 + (alcoholAmount > 0 ? 1 : 0)
-//     );
-
-//     // Increase positive effect over time when maintaining good habits
-//     if (alcoholAmount === 0) {
-//       cumulativePositiveEffect = Math.min(1, cumulativePositiveEffect + 0.01);
-//     } else {
-//       cumulativePositiveEffect = Math.max(0, cumulativePositiveEffect - 0.03);
-//     }
-
-//     // Generate daily data
-//     const dayData = {
-//       day: `Day ${i + 1}`,
-//       sleep:
-//         ranges.sleep.min +
-//         Math.random() * (ranges.sleep.max - ranges.sleep.min),
-//       sleepQ:
-//         ranges.sleepQ.min +
-//         (1 - alcoholEffect) * (ranges.sleepQ.max - ranges.sleepQ.min),
-//       steps:
-//         ranges.steps.min +
-//         (1 - alcoholEffect * 0.5) * (ranges.steps.max - ranges.steps.min),
-//       workout:
-//         Math.random() < negativeHabitProbability
-//           ? 0
-//           : ranges.workout.min +
-//             Math.random() * (ranges.workout.max - ranges.workout.min),
-//       calories:
-//         ranges.calories.min +
-//         Math.random() * (ranges.calories.max - ranges.calories.min),
-//       carbs:
-//         ranges.carbs.min +
-//         negativeHabitProbability * (ranges.carbs.max - ranges.carbs.min),
-//       protein:
-//         ranges.protein.min +
-//         (1 - negativeHabitProbability) *
-//           (ranges.protein.max - ranges.protein.min),
-//       water:
-//         ranges.water.min +
-//         (1 - alcoholEffect) * (ranges.water.max - ranges.water.min),
-//       alcohol: alcoholAmount,
-//       meetings:
-//         ranges.meetings.min +
-//         Math.random() * (ranges.meetings.max - ranges.meetings.min),
-//       productivity:
-//         ranges.productivity.min +
-//         (1 - alcoholEffect + cumulativePositiveEffect) *
-//           (ranges.productivity.max - ranges.productivity.min),
-//       focus:
-//         ranges.focus.min +
-//         (1 - alcoholEffect + cumulativePositiveEffect) *
-//           (ranges.focus.max - ranges.focus.min),
-//       mood:
-//         ranges.mood.min +
-//         (1 - alcoholEffect + cumulativePositiveEffect) *
-//           (ranges.mood.max - ranges.mood.min),
-//       rhr: ranges.rhr.min + alcoholEffect * (ranges.rhr.max - ranges.rhr.min),
-//     };
-
-//     // Round numerical values to appropriate precision
-//     Object.keys(dayData).forEach((key) => {
-//       if (typeof dayData[key] === "number") {
-//         dayData[key] = Number(dayData[key].toFixed(1));
-//       }
-//     });
-
-//     data.push(dayData);
-//   }
-
-//   return data;
-// }

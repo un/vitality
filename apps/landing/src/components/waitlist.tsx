@@ -57,7 +57,7 @@ export function Waitlist() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="primary">Join Augment Waitlist</Button>
+        <Button variant="primary">Join The Augment Movement</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

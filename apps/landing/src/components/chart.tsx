@@ -216,13 +216,15 @@ export function Chart() {
       <CardHeader>
         <CardTitle>
           <div className="flex flex-row gap-4 items-center">
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
+            <Avatar className="size-10">
+              <AvatarImage src="./omar_brick.jpg" />
               <AvatarFallback>MC</AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
-              <p className="text-md font-medium">Peter Von Demo</p>
-              <p className="text-sm text-slate-11 font-light">@McDemo</p>
+              <p className="text-md font-medium">
+                Omar <span className=" line-through">McPizza</span> McAugmented
+              </p>
+              <p className="text-sm text-slate-11 font-light">@McAugmented</p>
             </div>
           </div>
         </CardTitle>

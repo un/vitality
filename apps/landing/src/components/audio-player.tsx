@@ -63,18 +63,18 @@ export function AudioPlayer() {
 
   return (
     <Card className="w-full max-w-md mx-auto">
-      <CardContent className="flex flex-col items-center justify-center p-6 space-y-4">
-        <div className="flex flex-row justify-between items-center space-x-4 w-full">
+      <CardContent className="flex flex-col items-center justify-center py-2 px-6 ">
+        <div className="flex flex-row justify-between items-center gap-4 w-full">
           <Button
             onClick={togglePlayPause}
             variant="outline"
             size="icon"
-            className="min-w-12 h-12 rounded-full"
+            className="min-w-6 h-6 rounded-full"
           >
             {isPlaying ? (
-              <Pause className="h-6 w-6" />
+              <Pause className="h-3 w-3" />
             ) : (
-              <Play className="h-6 w-6" />
+              <Play className="h-3 w-3" />
             )}
           </Button>
           <div className="w-full">
@@ -85,7 +85,7 @@ export function AudioPlayer() {
               onValueChange={onSliderChange}
             />
           </div>
-          <div className="min-w-fit text-sm font-medium">
+          <div className="min-w-fit text-xs font-medium">
             {formatTime(currentTime)} / {formatTime(duration)}
           </div>
         </div>

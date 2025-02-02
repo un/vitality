@@ -7,7 +7,7 @@ export function StarGithub() {
     <Button asChild>
       <Link href="https://github.com/un/augment" target="_blank">
         <div className="flex items-center gap-4">
-          <SiGithub className="w-4 h-4" /> Star on Github
+          <SiGithub className="w-4 h-4" /> Star us on Github
         </div>
       </Link>
     </Button>

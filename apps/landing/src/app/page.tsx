@@ -1,4 +1,3 @@
-import { Chart } from "@/components/chart";
 import { HomePitch } from "@/components/home-pitch";
 import { Phone } from "@/components/phone";
 import { StarGithub } from "@/components/star-github";

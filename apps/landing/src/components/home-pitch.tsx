@@ -13,7 +13,7 @@ export function HomePitch() {
         </Button>
       </div> */}
 
-      <div className="flex flex-col gap-4 ml-8 border-l-2 border-slate-9 pl-4 bg-slate-1 rounded-lg rounded-l-none  text-sm">
+      <div className="flex flex-col gap-4 border-l-2 border-slate-9 pl-4 bg-slate-1 rounded-lg rounded-l-none  text-sm">
         <AudioPlayer />
         <p>
           <span>&ldquo;</span> Before the invention of GPS navigation, we&apos;d

@@ -1,5 +1,6 @@
 import { Chart } from "@/components/chart";
 import { HomePitch } from "@/components/home-pitch";
+import { Phone } from "@/components/phone";
 import { StarGithub } from "@/components/star-github";
 import { Waitlist } from "@/components/waitlist";
 
@@ -8,60 +9,71 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center max-w-5xl  text-slate-12 gap-8 p-6 md:p-16">
-      <nav className="flex flex-row items-center justify-between w-full ">
-        <h1 className="text-4xl font-bold">
-          <Link href="/">Augment</Link>
-        </h1>
-      </nav>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start pt-2">
-        <h2 className="text-2xl font-semibold flex flex-col gap-2 border-l-2 border-orange-9 pl-4 bg-orange-1 rounded-lg rounded-l-none">
-          <span>Open Source Longevity System</span>
-          <span className="flex flex-wrap gap-2">
-            <span className="text-slate-11">Live</span>
-            <span className="text-orange-9 font-bold">Longer</span>
-            <span className=" text-slate-11">+</span>
-            <span className="text-orange-9 font-bold">Sharper</span>
-            <span className="text-slate-11">+</span>
-            <span className="text-orange-9 font-bold">Better</span>
-          </span>
-        </h2>
-        <div className="flex flex-col gap-4">
-          <p>
-            We&apos;re building the world&apos;s most advanced system for your
-            personal longevity and vitality.
-          </p>
-          <p>
-            All your{" "}
-            <span className="text-slate-12 font-bold">daily activities</span>{" "}
-            are automatically{" "}
-            <span className="text-slate-12 font-bold">
-              tracked and analyzed
-            </span>
-            .
-          </p>
-          <p>
-            We use help you discover{" "}
-            <span className="text-slate-12 font-bold">trends and cycles</span>
-            {", "}
-            <br />
-            predictively suggesting changes to{" "}
-            <span className="text-slate-12 font-bold">
-              maximize your progress
-            </span>
-            .
-          </p>
-          <p>
-            <span className="text-slate-12 font-bold">Open Source</span> lets us
-            build a new{" "}
-            <span className="text-slate-12 font-bold">
-              open health ecosystem
-            </span>{" "}
-            <br />
-            focused on accelerating longevity and vitality, while protecting
-            your data and privacy.
-          </p>
+        <div className="flex flex-row gap-4 items-center">
+          <div className="flex flex-row md:flex-col gap-8 ">
+            <nav className="flex flex-row items-center justify-between w-full ">
+              <h1 className="text-4xl font-bold">
+                <Link href="/">Augment</Link>
+              </h1>
+            </nav>
+            <h2 className="text-2xl font-semibold flex flex-col gap-2 border-l-2 border-orange-9 pl-4 bg-orange-1 rounded-lg rounded-l-none">
+              <span>Open Source Longevity System</span>
+              <span className="flex flex-wrap gap-2">
+                <span className="text-slate-11">Live</span>
+                <span className="text-orange-9 font-bold">Longer</span>
+                <span className=" text-slate-11">+</span>
+                <span className="text-orange-9 font-bold">Sharper</span>
+                <span className="text-slate-11">+</span>
+                <span className="text-orange-9 font-bold">Better</span>
+              </span>
+            </h2>
+            <div className="flex flex-col gap-4">
+              <p>
+                We&apos;re building the world&apos;s most advanced system for
+                your personal longevity and vitality.
+              </p>
+              <p>
+                All your{" "}
+                <span className="text-slate-12 font-bold">
+                  daily activities
+                </span>{" "}
+                are automatically{" "}
+                <span className="text-slate-12 font-bold">
+                  tracked and analyzed
+                </span>
+                .
+              </p>
+              <p>
+                We use help you discover{" "}
+                <span className="text-slate-12 font-bold">
+                  trends and cycles
+                </span>
+                {", "}
+                <br />
+                predictively suggesting changes to{" "}
+                <span className="text-slate-12 font-bold">
+                  maximize your progress
+                </span>
+                .
+              </p>
+              <p>
+                <span className="text-slate-12 font-bold">Open Source</span>{" "}
+                lets us build a new{" "}
+                <span className="text-slate-12 font-bold">
+                  open health ecosystem
+                </span>{" "}
+                <br />
+                focused on accelerating longevity and vitality, while protecting
+                your data and privacy.
+              </p>
+            </div>
+          </div>
+          <Phone />
         </div>
-        <HomePitch />
+        <div className="flex flex-col-reverse md:flex-row gap-8 items-center pt-2 grow">
+          <HomePitch />
+        </div>
         <StarGithub />
         <Waitlist />
         <div className="grid grid-cols-1 gap-4 w-full md:grid-cols-3">
@@ -177,7 +189,7 @@ export default function Home() {
             methodologies, and insights fed into your custom guidance system.
           </span>
         </div>
-        <Chart />
+        {/* <Chart /> */}
       </main>
     </div>
   );

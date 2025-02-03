@@ -1,5 +1,5 @@
 {
-  "name": "vitality",
+  "name": "augment",
   "private": true,
   "scripts": {
     "build": "turbo build",

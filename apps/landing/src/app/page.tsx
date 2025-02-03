@@ -44,7 +44,7 @@ export default function Home() {
                 .
               </p>
               <p>
-                We use help you discover{" "}
+                We help you discover{" "}
                 <span className="text-slate-12 font-bold">
                   trends and cycles
                 </span>

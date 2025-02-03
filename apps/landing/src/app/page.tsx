@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center max-w-5xl  text-slate-12 gap-8 p-6 md:p-16">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start pt-2">
-        <div className="flex flex-row gap-4 items-center">
-          <div className="flex flex-row md:flex-col gap-8 ">
+        <div className="flex flex-col md:flex-row gap-4 items-center">
+          <div className="flex flex-col gap-8 ">
             <nav className="flex flex-row items-center justify-between w-full ">
               <h1 className="text-4xl font-bold">
                 <Link href="/">Augment</Link>

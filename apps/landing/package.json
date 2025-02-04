@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev:landing": "PORT=3900 next dev --turbopack",
+    "build:landing": "next build",
+    "start:landing": "next start",
+    "lint:landing": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

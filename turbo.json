@@ -19,9 +19,27 @@
         "!.next/cache/**"
       ]
     },
+    "build:landing": {
+      "dependsOn": [
+        "^build:landing"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ]
+    },
     "lint": {
       "dependsOn": [
         "^lint"
+      ]
+    },
+    "lint:landing": {
+      "dependsOn": [
+        "^lint:landing"
       ]
     },
     "check-types": {
@@ -30,6 +48,17 @@
       ]
     },
     "dev": {
+      "cache": false,
+      "persistent": true,
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env.development.local",
+        ".env.local",
+        ".env.development",
+        ".env"
+      ]
+    },
+    "dev:landing": {
       "cache": false,
       "persistent": true,
       "inputs": [

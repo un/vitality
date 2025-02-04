@@ -5,7 +5,11 @@
     "build": "turbo build",
     "dev": "dotenv -e .env.local -- turbo dev --env-mode=loose",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev:landing": "turbo dev:landing",
+    "build:landing": "turbo build:landing",
+    "start:landing": "turbo start:landing",
+    "lint:landing": "turbo lint:landing"
   },
   "devDependencies": {
     "prettier": "^3.4.2",

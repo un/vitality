@@ -1,0 +1,39 @@
+{
+  "cesVersion": "2.12.2",
+  "projectName": "mobile",
+  "packages": [
+    {
+      "name": "expo-router",
+      "type": "navigation",
+      "options": {
+        "type": "drawer + tabs"
+      }
+    },
+    {
+      "name": "nativewind",
+      "type": "styling"
+    },
+    {
+      "name": "zustand",
+      "type": "state-management"
+    }
+  ],
+  "flags": {
+    "noGit": false,
+    "noInstall": false,
+    "overwrite": false,
+    "importAlias": true,
+    "packageManager": "pnpm",
+    "eas": true
+  },
+  "packageManager": {
+    "type": "pnpm",
+    "version": "9.4.0"
+  },
+  "os": {
+    "type": "Darwin",
+    "platform": "darwin",
+    "arch": "arm64",
+    "kernelVersion": "24.3.0"
+  }
+}

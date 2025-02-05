@@ -230,6 +230,9 @@ importers:
       '@augment/database':
         specifier: workspace:*
         version: link:../database
+      '@augment/utils':
+        specifier: workspace:*
+        version: link:../utils
       better-auth:
         specifier: ^1.1.7
         version: 1.1.15
@@ -243,9 +246,6 @@ importers:
 
   packages/database:
     dependencies:
-      '@augment/auth':
-        specifier: workspace:*
-        version: link:../auth
       '@augment/utils':
         specifier: workspace:*
         version: link:../utils

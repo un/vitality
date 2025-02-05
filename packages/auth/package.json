@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@augment/database": "workspace:*",
+    "@augment/utils": "workspace:*",
     "better-auth": "^1.1.7",
     "dotenv": "^16.4.7"
   },

@@ -1,17 +1,17 @@
-name: flow-local-dev
+name: augment-local-dev
 
 services:
-  postgres-flow:
-    container_name: postgres-flow
+  postgres-augment:
+    container_name: postgres-augment
     image: postgres
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=flow
+      - POSTGRES_DB=augment
     ports:
       - 5432:5432
     volumes:
-      - postgres_flow_data:/var/lib/postgresql/data/
+      - postgres_augment_data:/var/lib/postgresql/data/
 
   # Local Redis server
   # redis-live:
@@ -58,7 +58,7 @@ services:
   #     "
 
 volumes:
-  postgres_flow_data:
+  postgres_augment_data:
   # redis_live_data:
   # minio_live_data:
   # minio_live_certs:

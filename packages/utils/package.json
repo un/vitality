@@ -9,7 +9,8 @@
     "exports": {
         "./typeid": "./typeid.ts",
         "./colors": "./uiColors.ts",
-        "./zodSchemas": "./zodSchemas.ts"
+        "./zodSchemas": "./zodSchemas.ts",
+        "./types/auth": "./types/auth.ts"
     },
     "keywords": [],
     "author": "",

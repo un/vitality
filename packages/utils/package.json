@@ -1,0 +1,27 @@
+{
+    "name": "@augment/utils",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "scripts": {
+        "check": "tsc --noEmit"
+    },
+    "exports": {
+        "./typeid": "./typeid.ts",
+        "./colors": "./uiColors.ts",
+        "./zodSchemas": "./zodSchemas.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "engines": {
+        "node": ">=20",
+        "pnpm": ">=8"
+    },
+    "dependencies": {
+        "itty-time": "^1.0.6",
+        "nanoid": "^5.0.7",
+        "typeid-js": "^1.0.0",
+        "zod": "^3.23.8"
+    }
+}

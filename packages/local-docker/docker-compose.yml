@@ -1,0 +1,64 @@
+name: flow-local-dev
+
+services:
+  postgres-flow:
+    container_name: postgres-flow
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=flow
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_flow_data:/var/lib/postgresql/data/
+
+  # Local Redis server
+  # redis-live:
+  #   container_name: redis-live
+  #   image: redis:7.2-alpine
+  #   restart: always
+  #   ports:
+  #     - '3901:6379' # expose redis on port 3102 to not collide with redis from elswhere and match memostash 310X ports
+  #   command: redis-server --save 20 1 --loglevel warning
+  #   volumes:
+  #     - redis_live_data:/data
+
+  # Local S3 Strorage
+  # minio-live:
+  #   container_name: minio-storage-live
+  #   image: 'bitnami/minio:latest'
+  #   restart: always
+  #   ports:
+  #     - '3902:3902'
+  #     - '3903:3903'
+  #   environment:
+  #     - MINIO_ROOT_USER=minioroot
+  #     - MINIO_ROOT_PASSWORD=minioroot
+  #     - MINIO_API_PORT_NUMBER=3902
+  #     - MINIO_CONSOLE_PORT_NUMBER=3903
+  #   volumes:
+  #     - minio_live_data:/bitnami/minio/data
+  #     - minio_live_certs:/certs
+
+  # createbuckets-live:
+  #   container_name: minio-bucket-creation-live
+  #   image: minio/mc
+  #   depends_on:
+  #     - minio-live
+  #   entrypoint: >
+  #     /bin/sh -c "
+  #     sleep 10;
+  #     /usr/bin/mc alias set myminio http://minio:3902 minioroot minioroot;
+  #     /usr/bin/mc mb myminio/avatars;
+  #     /usr/bin/mc mb myminio/attachments;
+  #     echo '{\"Version\": \"2012-10-17\",\"Statement\": [{\"Effect\": \"Allow\",\"Principal\": {\"AWS\": [\"*\"]},\"Action\": [\"s3:GetObject\"],\"Resource\": [\"arn:aws:s3:::avatars/*\"]}]}' > /tmp/policy.json;
+  #     /usr/bin/mc anonymous set-json /tmp/policy.json myminio/avatars;
+  #     exit 0;
+  #     "
+
+volumes:
+  postgres_flow_data:
+  # redis_live_data:
+  # minio_live_data:
+  # minio_live_certs:

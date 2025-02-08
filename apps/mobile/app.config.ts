@@ -21,6 +21,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ios: {
     bundleIdentifier: "com.augmentedhq",
     supportsTablet: true,
+    config: {
+      usesNonExemptEncryption: true,
+    },
   },
   android: {
     package: "com.augmentedhq",
@@ -38,5 +41,38 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     tsconfigPaths: true,
     typedRoutes: true,
   },
-  plugins: ["expo-router", "expo-sqlite"],
+  plugins: [
+    "expo-router",
+    [
+      "expo-sqlite",
+      {
+        enableFTS: true,
+        useSQLCipher: true,
+      },
+    ],
+    [
+      "expo-secure-store",
+      {
+        configureAndroidBackup: true,
+        faceIDPermission:
+          "Allow Augmented to access your Face ID biometric data.",
+      },
+    ],
+    [
+      "expo-font",
+      {
+        fonts: [
+          "./assets/fonts/GeistMono-Black.otf",
+          "./assets/fonts/GeistMono-Bold.otf",
+          "./assets/fonts/GeistMono-Light.otf",
+          "./assets/fonts/GeistMono-Medium.otf",
+          "./assets/fonts/GeistMono-Regular.otf",
+          "./assets/fonts/GeistMono-SemiBold.otf",
+          "./assets/fonts/GeistMono-Thin.otf",
+          "./assets/fonts/GeistMono-UltraBlack.otf",
+          "./assets/fonts/GeistMono-UltraLight.otf",
+        ],
+      },
+    ],
+  ],
 });

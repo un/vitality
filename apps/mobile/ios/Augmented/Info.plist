@@ -40,6 +40,8 @@
     </array>
     <key>CFBundleVersion</key>
     <string>1</string>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <true/>
     <key>LSMinimumSystemVersion</key>
     <string>12.0</string>
     <key>LSRequiresIPhoneOS</key>
@@ -51,9 +53,23 @@
       <key>NSAllowsLocalNetworking</key>
       <true/>
     </dict>
+    <key>NSFaceIDUsageDescription</key>
+    <string>Allow Augmented to access your Face ID biometric data.</string>
     <key>NSUserActivityTypes</key>
     <array>
       <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
+    </array>
+    <key>UIAppFonts</key>
+    <array>
+      <string>GeistMono-Black.otf</string>
+      <string>GeistMono-Bold.otf</string>
+      <string>GeistMono-Light.otf</string>
+      <string>GeistMono-Medium.otf</string>
+      <string>GeistMono-Regular.otf</string>
+      <string>GeistMono-SemiBold.otf</string>
+      <string>GeistMono-Thin.otf</string>
+      <string>GeistMono-UltraBlack.otf</string>
+      <string>GeistMono-UltraLight.otf</string>
     </array>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>

@@ -15,12 +15,14 @@ import "../styles.css";
 
 import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ActivityIndicator, Platform, StatusBar } from "react-native";
-import { openDatabaseSync, SQLiteProvider } from "expo-sqlite";
-import { DB_NAME } from "@/db";
-import { drizzle } from "drizzle-orm/expo-sqlite";
-import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
-import migrations from "../../db-migrations/migrations";
+// import { openDatabaseAsync, SQLiteProvider } from "expo-sqlite";
+// import { DB_NAME } from "@/utils/constants/db";
+// import { drizzle } from "drizzle-orm/expo-sqlite";
+// import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
+
+// import migrations from "../../db-migrations/migrations";
 
 const LIGHT_THEME: Theme = {
   ...DefaultTheme,
@@ -36,10 +38,38 @@ export {
   ErrorBoundary,
 } from "expo-router";
 
+// async function RunStartup() {
+//   // check securestore to see if password is set there
+
+//   const encryptionPassword = await SecureStore.getItemAsync(SECURE_STORE_KEY);
+//   // if no password, redirect to security flow
+//   if (!encryptionPassword) {
+//     //redirect
+//   }
+
+//   // if password is set continue app load flow
+//   // ! security Flow
+//   // Ask user for password
+//   // set password in securestore
+//   // continue app load flow with name as param
+//   // ! App Load Flow (name as param)
+//   // run db migrations
+//   // read db to check if user onboarded
+//   // if user onboarded, redirect to main app
+//   // if user not onboarded, redirect to onboarding
+//   // ! Onboarding Flow
+//   // ask user for name
+//   // redirect to main app
+// }
+
 export default function RootLayout() {
-  const expoDb = openDatabaseSync(DB_NAME);
-  const db = drizzle(expoDb);
-  const { success, error } = useMigrations(db, migrations);
+  // Handle DB Migrations
+  // const expoDb = await openDatabaseAsync(DB_NAME);
+  // await expoDb.execAsync("PRAGMA journal_mode = WAL");
+  // await expoDb.execAsync("PRAGMA foreign_keys = ON");
+
+  // const db = drizzle(expoDb);
+  // const { success, error } = useMigrations(db, migrations);
 
   const hasMounted = useRef(false);
   const { colorScheme, isDarkColorScheme } = useColorScheme();
@@ -52,6 +82,7 @@ export default function RootLayout() {
 
     if (Platform.OS === "web") {
       // Adds the background color to the html element to prevent white background on overscroll.
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       document.documentElement.classList.add("bg-background");
     }
     setIsColorSchemeLoaded(true);
@@ -63,14 +94,19 @@ export default function RootLayout() {
   }
   return (
     <Suspense fallback={<ActivityIndicator size="large" />}>
-      <SQLiteProvider
+      {/* <SQLiteProvider
         databaseName={DB_NAME}
         options={{
           enableChangeListener: true,
         }}
+        onInit={async (db) => {
+          await db.execAsync("PRAGMA foreign_keys = ON");
+          await db.execAsync("PRAGMA journal_mode = WAL");
+        }}
         useSuspense
-      >
-        <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+      > */}
+      <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+        <SafeAreaProvider>
           <Stack
             screenOptions={{
               headerStyle: {
@@ -82,8 +118,9 @@ export default function RootLayout() {
             }}
           />
           <StatusBar />
-        </ThemeProvider>
-      </SQLiteProvider>
+        </SafeAreaProvider>
+      </ThemeProvider>
+      {/* </SQLiteProvider> */}
     </Suspense>
   );
 }

@@ -1501,7 +1501,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context (5.1.0):
+  - react-native-safe-area-context (4.12.0):
     - React-Core
   - React-nativeconfig (0.76.7)
   - React-NativeModulesApple (0.76.7):
@@ -1770,7 +1770,7 @@ PODS:
     - React-logger (= 0.76.7)
     - React-perflogger (= 0.76.7)
     - React-utils (= 0.76.7)
-  - RNFlashList (1.7.2):
+  - RNFlashList (1.7.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1791,7 +1791,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNGestureHandler (2.22.1):
+  - RNGestureHandler (2.20.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1899,7 +1899,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (4.5.0):
+  - RNScreens (4.4.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2219,7 +2219,7 @@ SPEC CHECKSUMS:
   ExpoModulesCore: 618ce6d4d73f5354d85398690b3e4c64d5cb8b66
   ExpoSecureStore: 9a3665d7161dd1031be386e278bffd623658f316
   ExpoSplashScreen: e6a16a1ea280d4f59b095df901f43a1a5e2cc4ca
-  ExpoSQLite: fab1425f90f593057ab439dbf2fef7d42a83abdd
+  ExpoSQLite: e286a18b744ec01a561216216da144e810fd238d
   ExpoWebBrowser: a212e6b480d8857d3e441fba51e0c968333803b3
   EXUpdatesInterface: 7c977640bdd8b85833c19e3959ba46145c5719db
   FBLazyVector: ca8044c9df513671c85167838b4188791b6f37e1
@@ -2255,7 +2255,7 @@ SPEC CHECKSUMS:
   React-logger: 5cad0c76d056809523289e589309012215a393b5
   React-Mapbuffer: a381120aea722d2244d4e4b663a10d4c3b2d4e51
   React-microtasksnativemodule: 5eb5925893ffd482c5244f323f7fd98a4c07528d
-  react-native-safe-area-context: e134b241010ebe2aacdcea013565963d13826faa
+  react-native-safe-area-context: 8b8404e70b0cbf2a56428a17017c14c1dcc16448
   React-nativeconfig: 67fa7a63ea288cb5b1d0dd2deaf240405fec164f
   React-NativeModulesApple: 34b7a4d7441a4ee78d18109ff107c1ccf7c074a9
   React-perflogger: d1149037ac466ad2141d4ae541ca16cb73b2343b
@@ -2283,10 +2283,10 @@ SPEC CHECKSUMS:
   React-utils: 0342746d2cf989cf5e0d1b84c98cfa152edbdf3f
   ReactCodegen: ca395237650513af628c32aa1eb8fd586c771b13
   ReactCommon: 81e0744ee33adfd6d586141b927024f488bc49ea
-  RNFlashList: 076a14c3a81a9e70b8a3bc52a06cf28490e4c437
-  RNGestureHandler: e597c3cf95ce53819280c34d008d63bfbb05ddeb
+  RNFlashList: be712ce93b2ddcbff2d6bb01de4b9c4b0b84a185
+  RNGestureHandler: 27a63f2218affdf1a426d56682f9b174904838b3
   RNReanimated: 3508335b467b372d2d598bfdd30753d453bfd7f7
-  RNScreens: df5b744737987bdfe5f04e05579b53ce1bcdbfa9
+  RNScreens: 4a5ab20b324ed1e3fe3862796b8f8e0a6208c415
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: 90d80701b27946c4b23461c00a7207f300a6ff71
 

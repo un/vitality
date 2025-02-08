@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: GeistMono-Medium, sans-serif;
+  font-family: GeistMono-Medium, monospace;
+}
+
 :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;

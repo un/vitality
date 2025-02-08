@@ -1,56 +1,55 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Stack } from "expo-router";
-import { useLiveQuery } from "drizzle-orm/expo-sqlite";
-
-import { Button } from "~/components/ui/button";
-import { useDB } from "~/db";
-import { tasks } from "~/db/schema";
+import { router, Stack } from "expo-router";
+import * as SecureStore from "expo-secure-store";
+import { Button } from "@/components/ui/button";
+import { Text } from "@/components/ui/text";
+import { SECURE_STORE_KEY } from "@/utils/constants/security";
 
 export default function Index() {
-  const db = useDB();
-
-  const { data } = useLiveQuery(db.query.tasks.findMany());
-
-  async function createTask() {
-    await db.insert(tasks).values({
-      description: "description",
-      id: "1",
-      status: "todo",
-      title: "title",
-    });
+  const encryptionPassword = SecureStore.getItem(SECURE_STORE_KEY);
+  // if no password, redirect to security flow
+  if (!encryptionPassword) {
+    //redirect to security flow
+    console.log("no password");
   }
 
   return (
-    <SafeAreaView className="bg-background">
+    <SafeAreaView className="bg-red-900">
       {/* Changes page title visible on the header */}
-      <Stack.Screen options={{ title: "Home Page" }} />
-      <View className="h-full w-full bg-background p-4">
-        <Text className="pb-2 text-center text-5xl font-bold text-foreground">
-          Create <Text className="text-primary">T3</Text> Turbo
+      <Stack.Screen options={{ title: "App Index", header: () => null }} />
+      <View className="h-full w-full flex-col items-center justify-center p-4">
+        <Text className="pb-2 text-center text-5xl font-light text-foreground">
+          Augmented
+        </Text>
+        <Text className="pb-2 text-center text-5xl font-black text-foreground">
+          Augmented
         </Text>
 
-        <View className="py-2">
-          <Text className="font-semibold italic text-primary">
-            Press on a post
-          </Text>
-        </View>
-        <View className="py-2">
-          {data.map((task) => (
-            <Text key={task.id} className="font-semibold italic text-primary">
-              {task.title}
-            </Text>
-          ))}
-          {!data.length && (
+        {!encryptionPassword && (
+          <View className="py-2">
             <Text className="font-semibold italic text-primary">
-              No tasks yet
+              No Password
             </Text>
-          )}
-        </View>
+          </View>
+        )}
+        <Button
+          onPress={() => {
+            router.replace("/(setup)/create-password");
+          }}
+        >
+          <Text>Create Password</Text>
+        </Button>
+        {encryptionPassword && (
+          <View className="py-2">
+            <Text className="font-semibold italic text-primary">
+              Has Password {encryptionPassword}
+            </Text>
+          </View>
+        )}
+
         <View className="py-2">
-          <Button onPress={createTask}>
-            <Text>Create task</Text>
-          </Button>
+          <Text>Create task</Text>
         </View>
       </View>
     </SafeAreaView>

@@ -12,6 +12,17 @@ export default {
   presets: [baseConfig, nativewind],
   theme: {
     extend: {
+      fontFamily: {
+        "mono-black": ["GeistMono-Black", "sans-serif"],
+        "mono-bold": ["GeistMono-Bold", "sans-serif"],
+        "mono-light": ["GeistMono-Light", "sans-serif"],
+        "mono-medium": ["GeistMono-Medium", "sans-serif"],
+        "mono-regular": ["GeistMono-Regular", "sans-serif"],
+        "mono-semibold": ["GeistMono-SemiBold", "sans-serif"],
+        "mono-thin": ["GeistMono-Thin", "sans-serif"],
+        "mono-ultrablack": ["GeistMono-UltraBlack", "sans-serif"],
+        "mono-ultralight": ["GeistMono-UltraLight", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

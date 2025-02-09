@@ -1,3 +1,5 @@
+import "~/styles/global.css";
+
 import { useColorScheme as useNativewindColorScheme } from "nativewind";
 
 export function useColorScheme() {

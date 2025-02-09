@@ -4,13 +4,57 @@ import nativewind from "nativewind/preset";
 
 import baseConfig from "@augmented/tailwind-config/native";
 
+import { radixColors } from "./src/utils/radix-colors";
+
 const { hairlineWidth } = require("nativewind/theme");
 
 export default {
   darkMode: "class",
   content: ["./src/**/*.{ts,tsx}"],
   presets: [baseConfig, nativewind],
+  safelist: [
+    {
+      pattern:
+        /^(bg|text|border)-(bronze|gold|brown|orange|tomato|red|ruby|crimson|pink|plum|purple|violet|iris|indigo|blue|cyan|teal|jade|green|grass|gray|mauve|slate|sage|olive|sand|sky|mint|lime|yellow|amber)-(1|2|3|4|5|6|7|8|9|10|11|12)$/,
+    },
+  ],
   theme: {
+    colors: {
+      border: "hsl(var(--border))",
+      input: "hsl(var(--input))",
+      ring: "hsl(var(--ring))",
+      background: "var(--sand-9)",
+      foreground: "hsl(var(--foreground))",
+      primary: {
+        DEFAULT: "hsl(var(--primary))",
+        foreground: "hsl(var(--primary-foreground))",
+      },
+      secondary: {
+        DEFAULT: "hsl(var(--secondary))",
+        foreground: "hsl(var(--secondary-foreground))",
+      },
+      destructive: {
+        DEFAULT: "hsl(var(--destructive))",
+        foreground: "hsl(var(--destructive-foreground))",
+      },
+      muted: {
+        DEFAULT: "hsl(var(--muted))",
+        foreground: "hsl(var(--muted-foreground))",
+      },
+      accent: {
+        DEFAULT: "hsl(var(--accent))",
+        foreground: "hsl(var(--accent-foreground))",
+      },
+      popover: {
+        DEFAULT: "hsl(var(--popover))",
+        foreground: "hsl(var(--popover-foreground))",
+      },
+      card: {
+        DEFAULT: "hsl(var(--card))",
+        foreground: "hsl(var(--card-foreground))",
+      },
+      ...radixColors,
+    },
     extend: {
       fontFamily: {
         "mono-black": ["GeistMono-Black", "sans-serif"],
@@ -22,41 +66,6 @@ export default {
         "mono-thin": ["GeistMono-Thin", "sans-serif"],
         "mono-ultrablack": ["GeistMono-UltraBlack", "sans-serif"],
         "mono-ultralight": ["GeistMono-UltraLight", "sans-serif"],
-      },
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
       },
       borderWidth: {
         hairline: hairlineWidth(),
@@ -76,6 +85,6 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    plugins: [require("tailwindcss-animate")],
   },
-  plugins: [require("tailwindcss-animate")],
 } satisfies Config;

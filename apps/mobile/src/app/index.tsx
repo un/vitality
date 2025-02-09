@@ -15,14 +15,14 @@ export default function Index() {
   }
 
   return (
-    <SafeAreaView className="bg-red-900">
+    <SafeAreaView className="bg-sand-2">
       {/* Changes page title visible on the header */}
       <Stack.Screen options={{ title: "App Index", header: () => null }} />
       <View className="h-full w-full flex-col items-center justify-center p-4">
-        <Text className="pb-2 text-center text-5xl font-light text-foreground">
+        <Text className="text-plum-9 pb-2 text-center font-mono text-5xl font-light">
           Augmented
         </Text>
-        <Text className="pb-2 text-center text-5xl font-black text-foreground">
+        <Text className="text-crimson-9 pb-2 text-center text-5xl font-bold">
           Augmented
         </Text>
 

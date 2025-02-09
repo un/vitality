@@ -1,6 +1,9 @@
 import "@bacons/text-decoder/install";
 
 import type { Theme } from "@react-navigation/native";
+import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { ActivityIndicator, Platform, StatusBar } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Stack } from "expo-router";
 import { useColorScheme } from "@/lib/useColorScheme";
 import {
@@ -10,12 +13,6 @@ import {
 } from "@react-navigation/native";
 
 import { NAV_THEME } from "~/lib/constants";
-
-import "../styles.css";
-
-import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { ActivityIndicator, Platform, StatusBar } from "react-native";
-import { SafeAreaProvider } from "react-native-safe-area-context";
 
 // import { openDatabaseAsync, SQLiteProvider } from "expo-sqlite";
 // import { DB_NAME } from "@/utils/constants/db";
@@ -62,7 +59,7 @@ export {
 //   // redirect to main app
 // }
 
-export default function RootLayout() {
+function RootLayout() {
   // Handle DB Migrations
   // const expoDb = await openDatabaseAsync(DB_NAME);
   // await expoDb.execAsync("PRAGMA journal_mode = WAL");
@@ -129,3 +126,5 @@ const useIsomorphicLayoutEffect =
   Platform.OS === "web" && typeof window === "undefined"
     ? useEffect
     : useLayoutEffect;
+
+export default RootLayout;

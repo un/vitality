@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 body {
-  font-family: GeistMono-Medium, sans-serif;
-  font-family: GeistMono-Medium, monospace;
+  font-family: JetBrainsMono, monospace;
 }
 
 :root {

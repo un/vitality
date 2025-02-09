@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useFonts } from 'expo-font';
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Stack, useRouter } from "expo-router";
@@ -21,6 +22,14 @@ export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const [hasSecurityKey, setHasSecurityKey] = useState(false);
   const [hasOnboarded, setHasOnboarded] = useState(false);
+
+  const [fontsLoaded] = useFonts({
+    'JetBrainsMono': require('../../assets/fonts/JetBrainsMono-Regular.otf'),
+    'JetBrainsMono-Medium': require('../../assets/fonts/JetBrainsMono-Medium.otf'),
+    'JetBrainsMono-Bold': require('../../assets/fonts/JetBrainsMono-Bold.otf'),
+    'JetBrainsMono-Light': require('../../assets/fonts/JetBrainsMono-Light.otf'),
+    'JetBrainsMono-SemiBold': require('../../assets/fonts/JetBrainsMono-SemiBold.otf'),
+  });
 
   useEffect(() => {
     async function initializeApp() {
@@ -63,13 +72,17 @@ export default function Index() {
     void initializeApp();
   }, [router]);
 
+  if (!fontsLoaded) {
+    return <LoadingView />;
+  }
+
   return (
     <SafeAreaView className="bg-sand-3 flex h-full flex-col items-center justify-center gap-8">
       <Stack.Screen options={{ title: "Welcome", header: () => null }} />
 
       <View className="flex flex-col items-center gap-2">
-        <Text className="text-center text-5xl font-bold">Augmented</Text>
-        <Text className="font-light">Let's get you set up</Text>
+        <Text className="text-center text-5xl font-bold font-mono">Augmented</Text>
+        <Text className="font-light font-mono">Let's get you set up</Text>
       </View>
 
       <View className="px-8">

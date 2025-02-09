@@ -58,15 +58,18 @@ export default {
     },
     extend: {
       fontFamily: {
-        "mono-black": ["GeistMono-Black", "sans-serif"],
-        "mono-bold": ["GeistMono-Bold", "sans-serif"],
-        "mono-light": ["GeistMono-Light", "sans-serif"],
-        "mono-medium": ["GeistMono-Medium", "sans-serif"],
-        "mono-regular": ["GeistMono-Regular", "sans-serif"],
-        "mono-semibold": ["GeistMono-SemiBold", "sans-serif"],
-        "mono-thin": ["GeistMono-Thin", "sans-serif"],
-        "mono-ultrablack": ["GeistMono-UltraBlack", "sans-serif"],
-        "mono-ultralight": ["GeistMono-UltraLight", "sans-serif"],
+        // Remove old Geist font configurations
+        sans: ["JetBrainsMono", "monospace"], // Use JetBrainsMono as the default sans font
+        mono: ["JetBrainsMono", "monospace"], // Regular weight
+        "mono-medium": ["JetBrainsMono-Medium", "JetBrainsMono", "monospace"],
+        "mono-bold": ["JetBrainsMono-Bold", "JetBrainsMono", "monospace"],
+        "mono-light": ["JetBrainsMono-Light", "JetBrainsMono", "monospace"],
+        "mono-semibold": [
+          "JetBrainsMono-SemiBold",
+          "JetBrainsMono",
+          "monospace",
+        ],
+        system: ["system-ui", "sans-serif"], // Use this when you need system font
       },
       borderWidth: {
         hairline: hairlineWidth(),

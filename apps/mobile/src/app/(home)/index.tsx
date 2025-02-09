@@ -1,14 +1,17 @@
 import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
+import * as SecureStore from "expo-secure-store";
 import { useLiveQuery } from "drizzle-orm/expo-sqlite";
 
 import { Button } from "~/components/ui/button";
 import { useDB } from "~/db";
-import { tasks } from "~/db/schema";
+import { tasks, userProfile } from "~/db/schema";
+import { SECURE_STORE_KEY } from "~/utils/constants/security";
 
 export default function Index() {
   const db = useDB();
+  const router = useRouter();
 
   const { data } = useLiveQuery(db.query.tasks.findMany());
 
@@ -19,6 +22,12 @@ export default function Index() {
       status: "todo",
       title: "title",
     });
+  }
+
+  async function resetAccount() {
+    await SecureStore.deleteItemAsync(SECURE_STORE_KEY);
+    await db.delete(userProfile);
+    router.replace("/");
   }
 
   return (
@@ -50,6 +59,9 @@ export default function Index() {
         <View className="py-2">
           <Button onPress={createTask}>
             <Text>Create task</Text>
+          </Button>
+          <Button onPress={resetAccount}>
+            <Text>Reset</Text>
           </Button>
         </View>
       </View>

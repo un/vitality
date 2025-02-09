@@ -11,7 +11,7 @@ const { hairlineWidth } = require("nativewind/theme");
 export default {
   darkMode: "class",
   content: ["./src/**/*.{ts,tsx}"],
-  presets: [baseConfig, nativewind],
+  presets: [nativewind],
   safelist: [
     {
       pattern:
@@ -19,41 +19,42 @@ export default {
     },
   ],
   theme: {
+    // Override the base theme completely instead of extending it
     colors: {
-      border: "hsl(var(--border))",
-      input: "hsl(var(--input))",
-      ring: "hsl(var(--ring))",
-      background: "var(--sand-9)",
-      foreground: "hsl(var(--foreground))",
+      ...radixColors,
+      border: "var(--sand-6)",
+      input: "var(--sand-6)",
+      ring: "var(--sand-6)",
+      background: "var(--sand-2)",
+      foreground: "var(--sand-12)",
       primary: {
-        DEFAULT: "hsl(var(--primary))",
-        foreground: "hsl(var(--primary-foreground))",
+        DEFAULT: "var(--sand-12)",
+        foreground: "var(--sand-1)",
       },
       secondary: {
-        DEFAULT: "hsl(var(--secondary))",
-        foreground: "hsl(var(--secondary-foreground))",
+        DEFAULT: "var(--sand-9)",
+        foreground: "var(--sand-1)",
       },
       destructive: {
-        DEFAULT: "hsl(var(--destructive))",
-        foreground: "hsl(var(--destructive-foreground))",
+        DEFAULT: "var(--red-9)",
+        foreground: "var(--red-1)",
       },
       muted: {
-        DEFAULT: "hsl(var(--muted))",
-        foreground: "hsl(var(--muted-foreground))",
+        DEFAULT: "var(--sand-10)",
+        foreground: "var(--sand-1)",
       },
       accent: {
-        DEFAULT: "hsl(var(--accent))",
-        foreground: "hsl(var(--accent-foreground))",
+        DEFAULT: "var(--orange-9)",
+        foreground: "var(--orange-1)",
       },
       popover: {
-        DEFAULT: "hsl(var(--popover))",
-        foreground: "hsl(var(--popover-foreground))",
+        DEFAULT: "var(--popover)",
+        foreground: "var(--popover-foreground)",
       },
       card: {
-        DEFAULT: "hsl(var(--card))",
-        foreground: "hsl(var(--card-foreground))",
+        DEFAULT: "var(--card)",
+        foreground: "var(--card-foreground)",
       },
-      ...radixColors,
     },
     extend: {
       fontFamily: {

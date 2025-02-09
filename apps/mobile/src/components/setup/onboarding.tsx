@@ -1,7 +1,4 @@
-import { useState } from "react";
 import { View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { Stack, useRouter } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { openDatabaseAsync } from "expo-sqlite";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -23,10 +20,11 @@ const newProfileSchema = z.object({
 
 type NewProfileSchema = z.infer<typeof newProfileSchema>;
 
-export default function Onboarding() {
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
+interface OnboardingProps {
+  onComplete: () => void;
+}
 
+export default function Onboarding({ onComplete }: OnboardingProps) {
   const {
     control,
     handleSubmit,
@@ -49,46 +47,39 @@ export default function Onboarding() {
       name: data.name,
     });
 
-    router.replace("/(home)");
+    onComplete();
   };
 
   return (
-    <SafeAreaView className="bg-background">
-      <Stack.Screen options={{ title: "Setup Onboarding" }} />
-      <View className="h-full w-full bg-background p-4">
-        <Text className="pb-2 text-center text-5xl font-bold text-foreground">
-          Augmented
+    <>
+      <View className="py-2">
+        <Text className="font-semibold italic text-primary">
+          What should we call you
         </Text>
-
-        <View className="py-2">
-          <Text className="font-semibold italic text-primary">
-            What should we call you
-          </Text>
-        </View>
-
-        <View className="py-2">
-          <Controller
-            control={control}
-            rules={{
-              required: true,
-            }}
-            render={({ field: { onChange, onBlur, value } }) => (
-              <Input
-                onBlur={onBlur}
-                onChangeText={onChange}
-                value={value}
-                secureTextEntry={true}
-              />
-            )}
-            name="name"
-          />
-          {errors.name && <Text>{errors.name.message}</Text>}
-
-          <Button onPress={handleSubmit(onSubmit)}>
-            <Text>Set your Password</Text>
-          </Button>
-        </View>
       </View>
-    </SafeAreaView>
+
+      <View className="py-2">
+        <Controller
+          control={control}
+          rules={{
+            required: true,
+          }}
+          render={({ field: { onChange, onBlur, value } }) => (
+            <Input
+              onBlur={onBlur}
+              onChangeText={onChange}
+              value={value}
+              secureTextEntry={true}
+            />
+          )}
+          name="name"
+        />
+        {errors.name && <Text>{errors.name.message}</Text>}
+
+        <Button onPress={handleSubmit(onSubmit)}>
+          <Text>Set your Password</Text>
+        </Button>
+      </View>
+    </>
   );
 }

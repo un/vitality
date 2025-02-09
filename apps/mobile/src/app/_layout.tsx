@@ -1,25 +1,26 @@
 import "@bacons/text-decoder/install";
 
 import type { Theme } from "@react-navigation/native";
-import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { ActivityIndicator, Platform, StatusBar } from "react-native";
+import { useEffect, useState } from "react";
+import { ActivityIndicator, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
+import * as SecureStore from "expo-secure-store";
+import { openDatabaseAsync } from "expo-sqlite";
 import { useColorScheme } from "@/lib/useColorScheme";
 import {
   DarkTheme,
   DefaultTheme,
   ThemeProvider,
 } from "@react-navigation/native";
+import { drizzle } from "drizzle-orm/expo-sqlite";
+import { migrate } from "drizzle-orm/expo-sqlite/migrator";
 
+import { schema } from "~/db";
 import { NAV_THEME } from "~/lib/constants";
-
-// import { openDatabaseAsync, SQLiteProvider } from "expo-sqlite";
-// import { DB_NAME } from "@/utils/constants/db";
-// import { drizzle } from "drizzle-orm/expo-sqlite";
-// import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
-
-// import migrations from "../../db-migrations/migrations";
+import { DB_NAME } from "~/utils/constants/db";
+import { SECURE_STORE_KEY } from "~/utils/constants/security";
+import migrations from "../../db-migrations/migrations";
 
 const LIGHT_THEME: Theme = {
   ...DefaultTheme,
@@ -30,101 +31,85 @@ const DARK_THEME: Theme = {
   colors: NAV_THEME.dark,
 };
 
-export {
-  // Catch any errors thrown by the Layout component.
-  ErrorBoundary,
-} from "expo-router";
+const InitialLayout = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
 
-// async function RunStartup() {
-//   // check securestore to see if password is set there
+  useEffect(() => {
+    async function initializeApp() {
+      try {
+        // Step 1: Check security key
+        const securityKey = await SecureStore.getItemAsync(SECURE_STORE_KEY);
+        if (!securityKey) {
+          console.error("security key not found");
+          setIsLoading(false);
+          router.replace("/(setup)/security-setup");
+          return;
+        }
 
-//   const encryptionPassword = await SecureStore.getItemAsync(SECURE_STORE_KEY);
-//   // if no password, redirect to security flow
-//   if (!encryptionPassword) {
-//     //redirect
-//   }
+        // Step 2: Initialize database and run migrations
+        console.log("running migrations");
 
-//   // if password is set continue app load flow
-//   // ! security Flow
-//   // Ask user for password
-//   // set password in securestore
-//   // continue app load flow with name as param
-//   // ! App Load Flow (name as param)
-//   // run db migrations
-//   // read db to check if user onboarded
-//   // if user onboarded, redirect to main app
-//   // if user not onboarded, redirect to onboarding
-//   // ! Onboarding Flow
-//   // ask user for name
-//   // redirect to main app
-// }
+        const db = await openDatabaseAsync(DB_NAME);
+        await db.execAsync(`PRAGMA key = "${securityKey}"`);
+        await db.execAsync("PRAGMA journal_mode = WAL");
+        await db.execAsync("PRAGMA foreign_keys = ON");
 
-function RootLayout() {
-  // Handle DB Migrations
-  // const expoDb = await openDatabaseAsync(DB_NAME);
-  // await expoDb.execAsync("PRAGMA journal_mode = WAL");
-  // await expoDb.execAsync("PRAGMA foreign_keys = ON");
+        const drizzleDb = drizzle(db, { schema });
+        await migrate(drizzleDb, migrations);
 
-  // const db = drizzle(expoDb);
-  // const { success, error } = useMigrations(db, migrations);
+        // Step 3: Check onboarding status
+        const userProfile = await drizzleDb.query.userProfile.findFirst();
 
-  const hasMounted = useRef(false);
-  const { colorScheme, isDarkColorScheme } = useColorScheme();
-  const [isColorSchemeLoaded, setIsColorSchemeLoaded] = useState(false);
+        console.log("checking onbarding", userProfile);
+        const hasOnboarded = userProfile?.name;
 
-  useIsomorphicLayoutEffect(() => {
-    if (hasMounted.current) {
-      return;
+        if (!hasOnboarded) {
+          router.replace("/(setup)/onboarding");
+        } else {
+          router.replace("/(home)");
+        }
+      } catch (error) {
+        console.error("Initialization error:", error);
+        // Handle error appropriately
+      } finally {
+        setIsLoading(false);
+      }
     }
 
-    if (Platform.OS === "web") {
-      // Adds the background color to the html element to prevent white background on overscroll.
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      document.documentElement.classList.add("bg-background");
-    }
-    setIsColorSchemeLoaded(true);
-    hasMounted.current = true;
-  }, []);
+    initializeApp();
+  }, [router]);
 
-  if (!isColorSchemeLoaded) {
-    return null;
+  if (isLoading) {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <ActivityIndicator size="large" />
+      </View>
+    );
   }
+
+  return null;
+};
+
+export default function RootLayout() {
+  const colorScheme = useColorScheme();
+
   return (
-    <Suspense fallback={<ActivityIndicator size="large" />}>
-      {/* <SQLiteProvider
-        databaseName={DB_NAME}
-        options={{
-          enableChangeListener: true,
-        }}
-        onInit={async (db) => {
-          await db.execAsync("PRAGMA foreign_keys = ON");
-          await db.execAsync("PRAGMA journal_mode = WAL");
-        }}
-        useSuspense
-      > */}
-      <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-        <SafeAreaProvider>
-          <Stack
-            screenOptions={{
-              headerStyle: {
-                backgroundColor: "#f472b6",
-              },
-              contentStyle: {
-                backgroundColor: colorScheme == "dark" ? "#09090B" : "#FFFFFF",
-              },
-            }}
+    <ThemeProvider value={colorScheme === "dark" ? DARK_THEME : LIGHT_THEME}>
+      <SafeAreaProvider>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen
+            name="(setup)/security-setup"
+            options={{ gestureEnabled: false }}
           />
-          <StatusBar />
-        </SafeAreaProvider>
-      </ThemeProvider>
-      {/* </SQLiteProvider> */}
-    </Suspense>
+          <Stack.Screen
+            name="(setup)/onboarding"
+            options={{ gestureEnabled: false }}
+          />
+          <Stack.Screen name="(home)" options={{ gestureEnabled: false }} />
+        </Stack>
+        <InitialLayout />
+      </SafeAreaProvider>
+    </ThemeProvider>
   );
 }
-
-const useIsomorphicLayoutEffect =
-  Platform.OS === "web" && typeof window === "undefined"
-    ? useEffect
-    : useLayoutEffect;
-
-export default RootLayout;

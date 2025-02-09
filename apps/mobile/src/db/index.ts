@@ -12,3 +12,5 @@ export function useDB() {
 
   return db;
 }
+
+export { schema };

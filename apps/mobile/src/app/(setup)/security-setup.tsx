@@ -1,5 +1,6 @@
-import { SafeAreaView, Text, View } from "react-native";
-import { router, Stack } from "expo-router";
+import { View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Stack, useRouter } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
@@ -7,49 +8,32 @@ import { z } from "zod";
 
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
-import { Label } from "~/components/ui/label";
+import { Text } from "~/components/ui/text";
 import { SECURE_STORE_KEY } from "~/utils/constants/security";
 
-const newPasswordSchema = z
-  .object({
-    password: z.string().min(8),
-    confirmPassword: z.string().min(8),
-  })
-  .superRefine(({ confirmPassword, password }, ctx) => {
-    if (confirmPassword !== password) {
-      ctx.addIssue({
-        code: "custom",
-        message: "The passwords did not match",
-        path: ["confirmPassword"],
-      });
-    }
-  });
+const newPasswordSchema = z.object({
+  password: z.string().min(8),
+});
 
 type NewPasswordSchema = z.infer<typeof newPasswordSchema>;
 
-export default function Index() {
-  const encryptionPassword = SecureStore.getItem(SECURE_STORE_KEY);
-  // if no password, redirect to security flow
-  //   if (encryptionPassword) {
-  //     //redirect to home
-  //     router.replace("/");
-  //   }
+export default function SecuritySetup() {
+  const router = useRouter();
 
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<NewPasswordSchema>({
+  } = useForm({
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
     resolver: zodResolver(newPasswordSchema),
     defaultValues: {
       password: "",
-      confirmPassword: "",
     },
   });
   const onSubmit = async (data: NewPasswordSchema) => {
     await SecureStore.setItemAsync(SECURE_STORE_KEY, data.password);
-
-    console.log(data);
+    router.replace("/"); // This will trigger the initialization flow again
   };
 
   return (
@@ -64,7 +48,7 @@ export default function Index() {
           <Text className="font-semibold italic text-primary">
             Set a password to encrypt your data
           </Text>
-          <Text className="font-sm text-primary">
+          <Text className="text-primary">
             Store it securely, if you forget the password, your account CAN NOT
             be recovered and will need to be created again
           </Text>
@@ -86,28 +70,7 @@ export default function Index() {
             )}
             name="password"
           />
-          {errors.password && <Text>This is required.</Text>}
-          <Controller
-            control={control}
-            rules={{
-              required: true,
-            }}
-            render={({ field: { onChange, onBlur, value } }) => (
-              <>
-                <Label>
-                  <Text>Confirm Password</Text>
-                </Label>
-                <Input
-                  onBlur={onBlur}
-                  onChangeText={onChange}
-                  value={value}
-                  secureTextEntry={true}
-                />
-              </>
-            )}
-            name="confirmPassword"
-          />
-          {errors.confirmPassword && <Text>This is required.</Text>}
+          {errors.password && <Text>{errors.password.message}</Text>}
 
           <Button onPress={handleSubmit(onSubmit)}>
             <Text>Set your Password</Text>

@@ -1,1 +1,1 @@
-export const DB_NAME = "augmented_local";
+export const DB_NAME = "augmented.db";

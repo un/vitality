@@ -37,39 +37,37 @@ export default function SecuritySetup({ onComplete }: SecuritySetupProps) {
   };
 
   return (
-    <>
-      <View className="py-2">
-        <Text className="font-semibold italic text-primary">
-          Set a password to encrypt your data
-        </Text>
-        <Text className="text-primary">
-          Store it securely, if you forget the password, your account CAN NOT be
-          recovered and will need to be created again
-        </Text>
-      </View>
+    <View className="flex flex-col items-center justify-center gap-4">
+      <Text className="font-semibold italic text-primary">
+        Set a password to encrypt your data
+      </Text>
 
-      <View className="py-2">
-        <Controller
-          control={control}
-          rules={{
-            required: true,
-          }}
-          render={({ field: { onChange, onBlur, value } }) => (
-            <Input
-              onBlur={onBlur}
-              onChangeText={onChange}
-              value={value}
-              secureTextEntry={true}
-            />
-          )}
-          name="password"
-        />
-        {errors.password && <Text>{errors.password.message}</Text>}
+      <Controller
+        control={control}
+        rules={{
+          required: true,
+        }}
+        render={({ field: { onChange, onBlur, value } }) => (
+          <Input
+            onBlur={onBlur}
+            onChangeText={onChange}
+            value={value}
+            secureTextEntry={true}
+            className="w-full"
+          />
+        )}
+        name="password"
+      />
+      {errors.password && <Text>{errors.password.message}</Text>}
 
-        <Button onPress={handleSubmit(onSubmit)}>
-          <Text>Set your Password</Text>
-        </Button>
-      </View>
-    </>
+      <Button onPress={handleSubmit(onSubmit)} className="w-full">
+        <Text>Set your Password</Text>
+      </Button>
+
+      <Text className="pt-4 text-sm text-primary">
+        Tip: Store it securely, if you forget the password, your account CAN NOT
+        be recovered and will need to be created again!
+      </Text>
+    </View>
   );
 }

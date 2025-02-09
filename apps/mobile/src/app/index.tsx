@@ -68,7 +68,7 @@ export default function Index() {
       <Stack.Screen options={{ title: "Welcome", header: () => null }} />
 
       <View className="flex flex-col items-center gap-2">
-        <Text className="pb-2 text-center text-5xl font-bold">Augmented</Text>
+        <Text className="text-center text-5xl font-bold">Augmented</Text>
         <Text className="font-light">Let's get you set up</Text>
       </View>
 

@@ -26,7 +26,10 @@ export default function RootLayout() {
           enableChangeListener: true,
         }}
         onInit={async (db) => {
+          // Set encryption and important SQLite settings
           await db.execAsync(`PRAGMA key = "${encryptionPassword}"`);
+          await db.execAsync('PRAGMA journal_mode = WAL');
+          await db.execAsync('PRAGMA foreign_keys = ON');
         }}
         useSuspense
       >

@@ -1,4 +1,4 @@
-@import "./colors";
+@import "radi-color-css/dist/colors.css";
 
 @tailwind base;
 @tailwind components;

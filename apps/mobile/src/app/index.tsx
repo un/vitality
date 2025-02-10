@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useFonts } from 'expo-font';
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useFonts } from "expo-font";
 import { Stack, useRouter } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { openDatabaseAsync } from "expo-sqlite";
@@ -24,11 +24,16 @@ export default function Index() {
   const [hasOnboarded, setHasOnboarded] = useState(false);
 
   const [fontsLoaded] = useFonts({
-    'JetBrainsMono': require('../../assets/fonts/JetBrainsMono-Regular.otf'),
-    'JetBrainsMono-Medium': require('../../assets/fonts/JetBrainsMono-Medium.otf'),
-    'JetBrainsMono-Bold': require('../../assets/fonts/JetBrainsMono-Bold.otf'),
-    'JetBrainsMono-Light': require('../../assets/fonts/JetBrainsMono-Light.otf'),
-    'JetBrainsMono-SemiBold': require('../../assets/fonts/JetBrainsMono-SemiBold.otf'),
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    JetBrainsMono: require("../../assets/fonts/JetBrainsMono-Regular.otf"),
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    "JetBrainsMono-Medium": require("../../assets/fonts/JetBrainsMono-Medium.otf"),
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    "JetBrainsMono-Bold": require("../../assets/fonts/JetBrainsMono-Bold.otf"),
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    "JetBrainsMono-Light": require("../../assets/fonts/JetBrainsMono-Light.otf"),
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    "JetBrainsMono-SemiBold": require("../../assets/fonts/JetBrainsMono-SemiBold.otf"),
   });
 
   useEffect(() => {
@@ -81,8 +86,10 @@ export default function Index() {
       <Stack.Screen options={{ title: "Welcome", header: () => null }} />
 
       <View className="flex flex-col items-center gap-2">
-        <Text className="text-center text-5xl font-bold font-mono">Augmented</Text>
-        <Text className="font-light font-mono">Let's get you set up</Text>
+        <Text className="text-center font-mono text-5xl font-bold">
+          Augmented
+        </Text>
+        <Text className="font-mono font-light">Let's get you set up</Text>
       </View>
 
       <View className="px-8">

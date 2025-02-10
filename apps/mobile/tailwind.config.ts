@@ -1,10 +1,9 @@
 import type { Config } from "tailwindcss";
 // @ts-expect-error - no types
 import nativewind from "nativewind/preset";
+import { radixColors, tailwindSafelist } from "radi-color-css";
 
 import baseConfig from "@augmented/tailwind-config/native";
-
-import { radixColors } from "./src/utils/radix-colors";
 
 const { hairlineWidth } = require("nativewind/theme");
 
@@ -14,8 +13,7 @@ export default {
   presets: [nativewind],
   safelist: [
     {
-      pattern:
-        /^(bg|text|border)-(bronze|gold|brown|orange|tomato|red|ruby|crimson|pink|plum|purple|violet|iris|indigo|blue|cyan|teal|jade|green|grass|gray|mauve|slate|sage|olive|sand|sky|mint|lime|yellow|amber)-(1|2|3|4|5|6|7|8|9|10|11|12)$/,
+      ...tailwindSafelist,
     },
   ],
   theme: {

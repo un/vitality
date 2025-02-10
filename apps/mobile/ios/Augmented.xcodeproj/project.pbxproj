@@ -7,51 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C88EE344B134408877B1E60 /* GeistMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF08C3EFCB56432A9B9C0C2C /* GeistMono-Regular.otf */; };
-		129321B209F2477096788FC6 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F075E1F39FD458190462AC5 /* noop-file.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		37F79D71E6F3870816147D2A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 51580481AB9390BEBB33F299 /* PrivacyInfo.xcprivacy */; };
-		39F7AF35BA30484CBE492803 /* GeistMono-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54EB0D7EB0EF43739C769952 /* GeistMono-UltraLight.otf */; };
+		27832379F29E46F28E85BAEA /* JetBrainsMono-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F40C939DCFF8448EBE5EFFE0 /* JetBrainsMono-SemiBold.otf */; };
+		30A9450D5F9C4D32949AD6C2 /* JetBrainsMono-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4219DCFBE35D4DB18B69CD79 /* JetBrainsMono-Bold.otf */; };
+		317E76165A36452391C9B53C /* JetBrainsMono-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 708510C9F1BB4ACDB52C1786 /* JetBrainsMono-BoldItalic.otf */; };
+		31B0D757A2A44B449882FF19 /* JetBrainsMono-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBCA013BEDF8425B80C6E1BA /* JetBrainsMono-Light.otf */; };
+		38E3107165C949078D7F10F1 /* JetBrainsMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13F471312F674124952EC0C1 /* JetBrainsMono-Regular.otf */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		45BB37A0877E456E813EF984 /* GeistMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 88CD232C3B99421595AEDB98 /* GeistMono-Medium.otf */; };
-		4E9B39C2F27A4388A4AE4405 /* GeistMono-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B79FD259483049959C61978D /* GeistMono-SemiBold.otf */; };
-		933506790276466885779AD6 /* GeistMono-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 124CB5E4888A4308AF1EB30D /* GeistMono-Light.otf */; };
+		4B54D8DBE4424629A9C5844E /* JetBrainsMono-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63629D7C846B4435AC36C2E7 /* JetBrainsMono-ThinItalic.otf */; };
+		671DC285308B479B85DF6761 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C0AF97E9364645BE941F15 /* noop-file.swift */; };
+		6FE4B7673D4B46A18BF2193D /* JetBrainsMono-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74E63BD7A01844358695CFF5 /* JetBrainsMono-Italic.otf */; };
+		762554E43AA57DC02A050FDB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DA214C65639BE23A69306FCD /* PrivacyInfo.xcprivacy */; };
 		96905EF65AED1B983A6B3ABC /* libPods-Augmented.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Augmented.a */; };
-		9D7637B8877B46BBB321E9DA /* GeistMono-UltraBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2660197003A14AD3BB546A4F /* GeistMono-UltraBlack.otf */; };
+		ADF7F2F36B2246A8B3F3E5B2 /* JetBrainsMono-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CC6732D96E443DEB06598AA /* JetBrainsMono-LightItalic.otf */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		F1105EBF8ED543F8B12F7B6A /* GeistMono-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B6EF361E66184B5BA0687E8A /* GeistMono-Thin.otf */; };
-		F805E3A39D5D49BBA306F1D5 /* GeistMono-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 15738D738A1D493B8287D7AF /* GeistMono-Black.otf */; };
-		FEAF3C0F89C74B6DA5DF4A2F /* GeistMono-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80C0315E580E4DD5973F115E /* GeistMono-Bold.otf */; };
+		C362E4C65FC9427895344A80 /* JetBrainsMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77158B275AB14DE6AB14419A /* JetBrainsMono-Medium.otf */; };
+		CE2D7E0FF62A46C391EB7C8D /* JetBrainsMono-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAA8C450065C4419B130AF7C /* JetBrainsMono-Thin.otf */; };
+		CE36AA6087BB4A2F92D2FCB2 /* JetBrainsMono-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6423DEF9B2954194BE8E80D6 /* JetBrainsMono-SemiBoldItalic.otf */; };
+		D2E6434E5A964000BEDA6129 /* JetBrainsMono-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EB2A9C9490F4D9AA0DD3884 /* JetBrainsMono-ExtraLightItalic.otf */; };
+		E2BAB64774604B2C84637616 /* JetBrainsMono-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F32F3BD772CB473F8B29C57A /* JetBrainsMono-ExtraBoldItalic.otf */; };
+		EB2D23BCBE6B4195AE12DD82 /* JetBrainsMono-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 344C1E0C67B247F68F3A4E20 /* JetBrainsMono-MediumItalic.otf */; };
+		F32D0D4EAADC4986BCD91E2D /* JetBrainsMono-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AB1977C839647959208334F /* JetBrainsMono-ExtraBold.otf */; };
+		FFF1F61874BA47C89F1B135F /* JetBrainsMono-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80F0AEE3159949D4B4F926B7 /* JetBrainsMono-ExtraLight.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		124CB5E4888A4308AF1EB30D /* GeistMono-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GeistMono-Light.otf"; path = "../assets/fonts/GeistMono-Light.otf"; sourceTree = "<group>"; };
+		119A61DC23FF486384C3EE53 /* Augmented-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Augmented-Bridging-Header.h"; path = "Augmented/Augmented-Bridging-Header.h"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Augmented.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Augmented.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Augmented/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Augmented/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Augmented/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Augmented/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Augmented/main.m; sourceTree = "<group>"; };
-		15738D738A1D493B8287D7AF /* GeistMono-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GeistMono-Black.otf"; path = "../assets/fonts/GeistMono-Black.otf"; sourceTree = "<group>"; };
-		2660197003A14AD3BB546A4F /* GeistMono-UltraBlack.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GeistMono-UltraBlack.otf"; path = "../assets/fonts/GeistMono-UltraBlack.otf"; sourceTree = "<group>"; };
-		4F075E1F39FD458190462AC5 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Augmented/noop-file.swift"; sourceTree = "<group>"; };
-		51580481AB9390BEBB33F299 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Augmented/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		54EB0D7EB0EF43739C769952 /* GeistMono-UltraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GeistMono-UltraLight.otf"; path = "../assets/fonts/GeistMono-UltraLight.otf"; sourceTree = "<group>"; };
+		13F471312F674124952EC0C1 /* JetBrainsMono-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Regular.otf"; path = "../assets/fonts/JetBrainsMono-Regular.otf"; sourceTree = "<group>"; };
+		2CC6732D96E443DEB06598AA /* JetBrainsMono-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-LightItalic.otf"; path = "../assets/fonts/JetBrainsMono-LightItalic.otf"; sourceTree = "<group>"; };
+		344C1E0C67B247F68F3A4E20 /* JetBrainsMono-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-MediumItalic.otf"; path = "../assets/fonts/JetBrainsMono-MediumItalic.otf"; sourceTree = "<group>"; };
+		3AB1977C839647959208334F /* JetBrainsMono-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraBold.otf"; path = "../assets/fonts/JetBrainsMono-ExtraBold.otf"; sourceTree = "<group>"; };
+		3EB2A9C9490F4D9AA0DD3884 /* JetBrainsMono-ExtraLightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraLightItalic.otf"; path = "../assets/fonts/JetBrainsMono-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		4219DCFBE35D4DB18B69CD79 /* JetBrainsMono-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Bold.otf"; path = "../assets/fonts/JetBrainsMono-Bold.otf"; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Augmented.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Augmented.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B6507CBF04F44C3BBC296B2 /* Augmented-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Augmented-Bridging-Header.h"; path = "Augmented/Augmented-Bridging-Header.h"; sourceTree = "<group>"; };
+		63629D7C846B4435AC36C2E7 /* JetBrainsMono-ThinItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ThinItalic.otf"; path = "../assets/fonts/JetBrainsMono-ThinItalic.otf"; sourceTree = "<group>"; };
+		6423DEF9B2954194BE8E80D6 /* JetBrainsMono-SemiBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-SemiBoldItalic.otf"; path = "../assets/fonts/JetBrainsMono-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-Augmented.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Augmented.debug.xcconfig"; path = "Target Support Files/Pods-Augmented/Pods-Augmented.debug.xcconfig"; sourceTree = "<group>"; };
+		708510C9F1BB4ACDB52C1786 /* JetBrainsMono-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-BoldItalic.otf"; path = "../assets/fonts/JetBrainsMono-BoldItalic.otf"; sourceTree = "<group>"; };
+		74E63BD7A01844358695CFF5 /* JetBrainsMono-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Italic.otf"; path = "../assets/fonts/JetBrainsMono-Italic.otf"; sourceTree = "<group>"; };
+		77158B275AB14DE6AB14419A /* JetBrainsMono-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Medium.otf"; path = "../assets/fonts/JetBrainsMono-Medium.otf"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-Augmented.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Augmented.release.xcconfig"; path = "Target Support Files/Pods-Augmented/Pods-Augmented.release.xcconfig"; sourceTree = "<group>"; };
-		80C0315E580E4DD5973F115E /* GeistMono-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GeistMono-Bold.otf"; path = "../assets/fonts/GeistMono-Bold.otf"; sourceTree = "<group>"; };
-		88CD232C3B99421595AEDB98 /* GeistMono-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GeistMono-Medium.otf"; path = "../assets/fonts/GeistMono-Medium.otf"; sourceTree = "<group>"; };
+		80F0AEE3159949D4B4F926B7 /* JetBrainsMono-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraLight.otf"; path = "../assets/fonts/JetBrainsMono-ExtraLight.otf"; sourceTree = "<group>"; };
+		A7C0AF97E9364645BE941F15 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Augmented/noop-file.swift"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = Augmented/SplashScreen.storyboard; sourceTree = "<group>"; };
-		B6EF361E66184B5BA0687E8A /* GeistMono-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GeistMono-Thin.otf"; path = "../assets/fonts/GeistMono-Thin.otf"; sourceTree = "<group>"; };
-		B79FD259483049959C61978D /* GeistMono-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GeistMono-SemiBold.otf"; path = "../assets/fonts/GeistMono-SemiBold.otf"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		CF08C3EFCB56432A9B9C0C2C /* GeistMono-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GeistMono-Regular.otf"; path = "../assets/fonts/GeistMono-Regular.otf"; sourceTree = "<group>"; };
+		DA214C65639BE23A69306FCD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Augmented/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		EAA8C450065C4419B130AF7C /* JetBrainsMono-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Thin.otf"; path = "../assets/fonts/JetBrainsMono-Thin.otf"; sourceTree = "<group>"; };
+		EBCA013BEDF8425B80C6E1BA /* JetBrainsMono-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Light.otf"; path = "../assets/fonts/JetBrainsMono-Light.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F32F3BD772CB473F8B29C57A /* JetBrainsMono-ExtraBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraBoldItalic.otf"; path = "../assets/fonts/JetBrainsMono-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		F40C939DCFF8448EBE5EFFE0 /* JetBrainsMono-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-SemiBold.otf"; path = "../assets/fonts/JetBrainsMono-SemiBold.otf"; sourceTree = "<group>"; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Augmented/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,23 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05CA6703CCC14A2B8DD4D91C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				15738D738A1D493B8287D7AF /* GeistMono-Black.otf */,
-				80C0315E580E4DD5973F115E /* GeistMono-Bold.otf */,
-				124CB5E4888A4308AF1EB30D /* GeistMono-Light.otf */,
-				88CD232C3B99421595AEDB98 /* GeistMono-Medium.otf */,
-				CF08C3EFCB56432A9B9C0C2C /* GeistMono-Regular.otf */,
-				B79FD259483049959C61978D /* GeistMono-SemiBold.otf */,
-				B6EF361E66184B5BA0687E8A /* GeistMono-Thin.otf */,
-				2660197003A14AD3BB546A4F /* GeistMono-UltraBlack.otf */,
-				54EB0D7EB0EF43739C769952 /* GeistMono-UltraLight.otf */,
-			);
-			name = Resources;
-			path = "";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* Augmented */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +91,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				4F075E1F39FD458190462AC5 /* noop-file.swift */,
-				6B6507CBF04F44C3BBC296B2 /* Augmented-Bridging-Header.h */,
-				51580481AB9390BEBB33F299 /* PrivacyInfo.xcprivacy */,
+				A7C0AF97E9364645BE941F15 /* noop-file.swift */,
+				119A61DC23FF486384C3EE53 /* Augmented-Bridging-Header.h */,
+				DA214C65639BE23A69306FCD /* PrivacyInfo.xcprivacy */,
 			);
 			name = Augmented;
 			sourceTree = "<group>";
@@ -126,7 +123,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
-				05CA6703CCC14A2B8DD4D91C /* Resources */,
+				8664A4FBADE34E3C90A61318 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -139,6 +136,30 @@
 				13B07F961A680F5B00A75B9A /* Augmented.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8664A4FBADE34E3C90A61318 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4219DCFBE35D4DB18B69CD79 /* JetBrainsMono-Bold.otf */,
+				708510C9F1BB4ACDB52C1786 /* JetBrainsMono-BoldItalic.otf */,
+				3AB1977C839647959208334F /* JetBrainsMono-ExtraBold.otf */,
+				F32F3BD772CB473F8B29C57A /* JetBrainsMono-ExtraBoldItalic.otf */,
+				80F0AEE3159949D4B4F926B7 /* JetBrainsMono-ExtraLight.otf */,
+				3EB2A9C9490F4D9AA0DD3884 /* JetBrainsMono-ExtraLightItalic.otf */,
+				EBCA013BEDF8425B80C6E1BA /* JetBrainsMono-Light.otf */,
+				2CC6732D96E443DEB06598AA /* JetBrainsMono-LightItalic.otf */,
+				77158B275AB14DE6AB14419A /* JetBrainsMono-Medium.otf */,
+				344C1E0C67B247F68F3A4E20 /* JetBrainsMono-MediumItalic.otf */,
+				F40C939DCFF8448EBE5EFFE0 /* JetBrainsMono-SemiBold.otf */,
+				6423DEF9B2954194BE8E80D6 /* JetBrainsMono-SemiBoldItalic.otf */,
+				EAA8C450065C4419B130AF7C /* JetBrainsMono-Thin.otf */,
+				63629D7C846B4435AC36C2E7 /* JetBrainsMono-ThinItalic.otf */,
+				13F471312F674124952EC0C1 /* JetBrainsMono-Regular.otf */,
+				74E63BD7A01844358695CFF5 /* JetBrainsMono-Italic.otf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		92DBD88DE9BF7D494EA9DA96 /* Augmented */ = {
@@ -183,13 +204,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Augmented" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				31F137504B36D40802076E6E /* [Expo] Configure project */,
+				C0A75556CC35C67189DDCC35 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				30469E5CAB78D271BC4C4539 /* [CP] Embed Pods Frameworks */,
+				D248C639B6CC99A773273D4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,16 +260,23 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				F805E3A39D5D49BBA306F1D5 /* GeistMono-Black.otf in Resources */,
-				FEAF3C0F89C74B6DA5DF4A2F /* GeistMono-Bold.otf in Resources */,
-				933506790276466885779AD6 /* GeistMono-Light.otf in Resources */,
-				45BB37A0877E456E813EF984 /* GeistMono-Medium.otf in Resources */,
-				0C88EE344B134408877B1E60 /* GeistMono-Regular.otf in Resources */,
-				4E9B39C2F27A4388A4AE4405 /* GeistMono-SemiBold.otf in Resources */,
-				F1105EBF8ED543F8B12F7B6A /* GeistMono-Thin.otf in Resources */,
-				9D7637B8877B46BBB321E9DA /* GeistMono-UltraBlack.otf in Resources */,
-				39F7AF35BA30484CBE492803 /* GeistMono-UltraLight.otf in Resources */,
-				37F79D71E6F3870816147D2A /* PrivacyInfo.xcprivacy in Resources */,
+				30A9450D5F9C4D32949AD6C2 /* JetBrainsMono-Bold.otf in Resources */,
+				317E76165A36452391C9B53C /* JetBrainsMono-BoldItalic.otf in Resources */,
+				F32D0D4EAADC4986BCD91E2D /* JetBrainsMono-ExtraBold.otf in Resources */,
+				E2BAB64774604B2C84637616 /* JetBrainsMono-ExtraBoldItalic.otf in Resources */,
+				FFF1F61874BA47C89F1B135F /* JetBrainsMono-ExtraLight.otf in Resources */,
+				D2E6434E5A964000BEDA6129 /* JetBrainsMono-ExtraLightItalic.otf in Resources */,
+				31B0D757A2A44B449882FF19 /* JetBrainsMono-Light.otf in Resources */,
+				ADF7F2F36B2246A8B3F3E5B2 /* JetBrainsMono-LightItalic.otf in Resources */,
+				C362E4C65FC9427895344A80 /* JetBrainsMono-Medium.otf in Resources */,
+				EB2D23BCBE6B4195AE12DD82 /* JetBrainsMono-MediumItalic.otf in Resources */,
+				27832379F29E46F28E85BAEA /* JetBrainsMono-SemiBold.otf in Resources */,
+				CE36AA6087BB4A2F92D2FCB2 /* JetBrainsMono-SemiBoldItalic.otf in Resources */,
+				CE2D7E0FF62A46C391EB7C8D /* JetBrainsMono-Thin.otf in Resources */,
+				4B54D8DBE4424629A9C5844E /* JetBrainsMono-ThinItalic.otf in Resources */,
+				38E3107165C949078D7F10F1 /* JetBrainsMono-Regular.otf in Resources */,
+				6FE4B7673D4B46A18BF2193D /* JetBrainsMono-Italic.otf in Resources */,
+				762554E43AA57DC02A050FDB /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,45 +320,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		30469E5CAB78D271BC4C4539 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Augmented/Pods-Augmented-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExpoSQLite/crsqlite.framework/crsqlite",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/crsqlite.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Augmented/Pods-Augmented-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		31F137504B36D40802076E6E /* [Expo] Configure project */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Expo] Configure project";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-Augmented/expo-configure-project.sh\"\n";
-		};
 		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +356,45 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Augmented/Pods-Augmented-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C0A75556CC35C67189DDCC35 /* [Expo] Configure project */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-Augmented/expo-configure-project.sh\"\n";
+		};
+		D248C639B6CC99A773273D4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Augmented/Pods-Augmented-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ExpoSQLite/crsqlite.framework/crsqlite",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/crsqlite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Augmented/Pods-Augmented-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -377,7 +405,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				129321B209F2477096788FC6 /* noop-file.swift in Sources */,
+				671DC285308B479B85DF6761 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

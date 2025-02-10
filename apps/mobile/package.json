@@ -50,6 +50,7 @@
     "expo-status-bar": "~2.0.1",
     "expo-web-browser": "^14.0.2",
     "nativewind": "~4.1.23",
+    "radi-color-css": "^1.0.5",
     "react": "catalog:react18",
     "react-dom": "catalog:react18",
     "react-hook-form": "^7.54.2",

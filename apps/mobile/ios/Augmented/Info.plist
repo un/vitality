@@ -61,15 +61,22 @@
     </array>
     <key>UIAppFonts</key>
     <array>
-      <string>GeistMono-Black.otf</string>
-      <string>GeistMono-Bold.otf</string>
-      <string>GeistMono-Light.otf</string>
-      <string>GeistMono-Medium.otf</string>
-      <string>GeistMono-Regular.otf</string>
-      <string>GeistMono-SemiBold.otf</string>
-      <string>GeistMono-Thin.otf</string>
-      <string>GeistMono-UltraBlack.otf</string>
-      <string>GeistMono-UltraLight.otf</string>
+      <string>JetBrainsMono-Bold.otf</string>
+      <string>JetBrainsMono-BoldItalic.otf</string>
+      <string>JetBrainsMono-ExtraBold.otf</string>
+      <string>JetBrainsMono-ExtraBoldItalic.otf</string>
+      <string>JetBrainsMono-ExtraLight.otf</string>
+      <string>JetBrainsMono-ExtraLightItalic.otf</string>
+      <string>JetBrainsMono-Light.otf</string>
+      <string>JetBrainsMono-LightItalic.otf</string>
+      <string>JetBrainsMono-Medium.otf</string>
+      <string>JetBrainsMono-MediumItalic.otf</string>
+      <string>JetBrainsMono-SemiBold.otf</string>
+      <string>JetBrainsMono-SemiBoldItalic.otf</string>
+      <string>JetBrainsMono-Thin.otf</string>
+      <string>JetBrainsMono-ThinItalic.otf</string>
+      <string>JetBrainsMono-Regular.otf</string>
+      <string>JetBrainsMono-Italic.otf</string>
     </array>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>

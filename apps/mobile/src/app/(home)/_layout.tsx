@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { ActivityIndicator, StatusBar } from "react-native";
-import { router, Stack, Tabs } from "expo-router";
+import { router, Tabs } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { SQLiteProvider } from "expo-sqlite";
 import { DB_NAME } from "@/utils/constants/db";
@@ -40,14 +40,14 @@ export default function RootLayout() {
             name="index"
             options={{
               title: "Home",
-              tabBarIcon: ({ color }) => <Text>asd</Text>,
+              tabBarIcon: () => <Text>asd</Text>,
             }}
           />
           <Tabs.Screen
             name="tasks"
             options={{
               title: "Tasks",
-              tabBarIcon: ({ color }) => <Text>asd</Text>,
+              tabBarIcon: () => <Text>asd</Text>,
             }}
           />
         </Tabs>

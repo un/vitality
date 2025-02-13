@@ -8,6 +8,7 @@ import { openDatabaseAsync } from "expo-sqlite";
 import { drizzle } from "drizzle-orm/expo-sqlite";
 import { migrate } from "drizzle-orm/expo-sqlite/migrator";
 
+import { MigrationError } from "~/components/setup/migrationError";
 import Onboarding from "~/components/setup/onboarding";
 import SecuritySetup from "~/components/setup/security-setup";
 import { Text } from "~/components/ui/text";
@@ -22,17 +23,18 @@ export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const [hasSecurityKey, setHasSecurityKey] = useState(false);
   const [hasOnboarded, setHasOnboarded] = useState(false);
+  const [migrationError, setMigrationError] = useState(false);
 
   const [fontsLoaded] = useFonts({
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-assignment
     JetBrainsMono: require("../../assets/fonts/JetBrainsMono-Regular.otf"),
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-assignment
     "JetBrainsMono-Medium": require("../../assets/fonts/JetBrainsMono-Medium.otf"),
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-assignment
     "JetBrainsMono-Bold": require("../../assets/fonts/JetBrainsMono-Bold.otf"),
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-assignment
     "JetBrainsMono-Light": require("../../assets/fonts/JetBrainsMono-Light.otf"),
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-assignment
     "JetBrainsMono-SemiBold": require("../../assets/fonts/JetBrainsMono-SemiBold.otf"),
   });
 
@@ -56,7 +58,14 @@ export default function Index() {
         await db.execAsync("PRAGMA foreign_keys = ON");
 
         const drizzleDb = drizzle(db, { schema });
-        await migrate(drizzleDb, migrations);
+        try {
+          await migrate(drizzleDb, migrations);
+        } catch (error) {
+          await db.closeAsync();
+          setMigrationError(true);
+          console.error("Migration error:", error);
+          return <MigrationError />;
+        }
 
         // Step 3: Check onboarding status
         const userProfile = await drizzleDb.query.userProfile.findFirst();
@@ -93,6 +102,7 @@ export default function Index() {
       </View>
 
       <View className="w-full px-8">
+        {migrationError ? <MigrationError /> : null}
         {isLoading ? (
           <LoadingView />
         ) : !hasSecurityKey ? (

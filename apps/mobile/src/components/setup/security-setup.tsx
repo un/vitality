@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { View } from "react-native";
 import * as SecureStore from "expo-secure-store";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,6 +21,7 @@ interface SecuritySetupProps {
 }
 
 export default function SecuritySetup({ onComplete }: SecuritySetupProps) {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     control,
     handleSubmit,
@@ -32,7 +34,9 @@ export default function SecuritySetup({ onComplete }: SecuritySetupProps) {
     },
   });
   const onSubmit = async (data: NewPasswordSchema) => {
+    setIsLoading(true);
     await SecureStore.setItemAsync(SECURE_STORE_KEY, data.password);
+    setIsLoading(false);
     onComplete();
   };
 
@@ -60,7 +64,11 @@ export default function SecuritySetup({ onComplete }: SecuritySetupProps) {
       />
       {errors.password && <Text>{errors.password.message}</Text>}
 
-      <Button onPress={handleSubmit(onSubmit)} className="w-full">
+      <Button
+        onPress={handleSubmit(onSubmit)}
+        loading={isLoading}
+        className="w-full"
+      >
         <Text>Set your Password</Text>
       </Button>
 

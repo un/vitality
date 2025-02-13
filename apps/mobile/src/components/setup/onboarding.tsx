@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { View } from "react-native";
 import * as SecureStore from "expo-secure-store";
 import { openDatabaseAsync } from "expo-sqlite";
@@ -25,6 +26,7 @@ interface OnboardingProps {
 }
 
 export default function Onboarding({ onComplete }: OnboardingProps) {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     control,
     handleSubmit,
@@ -37,6 +39,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
     },
   });
   const onSubmit = async (data: NewProfileSchema) => {
+    setIsLoading(true);
     const securityKey = await SecureStore.getItemAsync(SECURE_STORE_KEY);
     const db = await openDatabaseAsync(DB_NAME);
     await db.execAsync(`PRAGMA key = "${securityKey}"`);
@@ -47,6 +50,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
       name: data.name,
     });
 
+    setIsLoading(false);
     onComplete();
   };
 
@@ -75,8 +79,12 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
       />
       {errors.name && <Text>{errors.name.message}</Text>}
 
-      <Button onPress={handleSubmit(onSubmit)} className="w-full">
-        <Text>Set your Password</Text>
+      <Button
+        onPress={handleSubmit(onSubmit)}
+        loading={isLoading}
+        className="w-full"
+      >
+        <Text>Set your Name</Text>
       </Button>
     </View>
   );

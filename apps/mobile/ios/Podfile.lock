@@ -1921,6 +1921,8 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - RNSVG (15.11.1):
+    - React-Core
   - SocketRocket (0.7.1)
   - Yoga (0.0.0)
 
@@ -2014,6 +2016,7 @@ DEPENDENCIES:
   - RNGestureHandler (from `../../../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../../../node_modules/react-native-reanimated`)
   - RNScreens (from `../../../node_modules/react-native-screens`)
+  - RNSVG (from `../../../node_modules/react-native-svg`)
   - Yoga (from `../../../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -2196,6 +2199,8 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../../../node_modules/react-native-screens"
+  RNSVG:
+    :path: "../../../node_modules/react-native-svg"
   Yoga:
     :path: "../../../node_modules/react-native/ReactCommon/yoga"
 
@@ -2287,6 +2292,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: 27a63f2218affdf1a426d56682f9b174904838b3
   RNReanimated: 3508335b467b372d2d598bfdd30753d453bfd7f7
   RNScreens: 4a5ab20b324ed1e3fe3862796b8f8e0a6208c415
+  RNSVG: 86fecdfc637614ba9def63f7f3f2e7795e018356
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: 90d80701b27946c4b23461c00a7207f300a6ff71
 

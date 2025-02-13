@@ -82,7 +82,7 @@ export default function Index() {
   }
 
   return (
-    <SafeAreaView className="bg-sand-3 flex h-full flex-col items-center justify-center gap-8">
+    <SafeAreaView className="bg-sand-3 flex h-full w-full flex-col items-center justify-center gap-8">
       <Stack.Screen options={{ title: "Welcome", header: () => null }} />
 
       <View className="flex flex-col items-center gap-2">
@@ -92,7 +92,7 @@ export default function Index() {
         <Text className="font-mono font-light">Let's get you set up</Text>
       </View>
 
-      <View className="px-8">
+      <View className="w-full px-8">
         {isLoading ? (
           <LoadingView />
         ) : !hasSecurityKey ? (

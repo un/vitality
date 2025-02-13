@@ -1,10 +1,12 @@
 import { Suspense } from "react";
 import { ActivityIndicator, StatusBar } from "react-native";
-import { router, Stack } from "expo-router";
+import { router, Stack, Tabs } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { SQLiteProvider } from "expo-sqlite";
 import { DB_NAME } from "@/utils/constants/db";
 import { SECURE_STORE_KEY } from "@/utils/constants/security";
+
+import { Text } from "~/components/ui/text";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -28,12 +30,27 @@ export default function RootLayout() {
         onInit={async (db) => {
           // Set encryption and important SQLite settings
           await db.execAsync(`PRAGMA key = "${encryptionPassword}"`);
-          await db.execAsync('PRAGMA journal_mode = WAL');
-          await db.execAsync('PRAGMA foreign_keys = ON');
+          await db.execAsync("PRAGMA journal_mode = WAL");
+          await db.execAsync("PRAGMA foreign_keys = ON");
         }}
         useSuspense
       >
-        <Stack />
+        <Tabs>
+          <Tabs.Screen
+            name="index"
+            options={{
+              title: "Home",
+              tabBarIcon: ({ color }) => <Text>asd</Text>,
+            }}
+          />
+          <Tabs.Screen
+            name="tasks"
+            options={{
+              title: "Tasks",
+              tabBarIcon: ({ color }) => <Text>asd</Text>,
+            }}
+          />
+        </Tabs>
         <StatusBar />
       </SQLiteProvider>
     </Suspense>

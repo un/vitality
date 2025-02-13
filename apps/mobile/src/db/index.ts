@@ -7,6 +7,7 @@ import * as schema from "./schema";
 export function useDB() {
   try {
     const dbContext = useSQLiteContext();
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!dbContext) {
       throw new Error("Database context is not available");
     }

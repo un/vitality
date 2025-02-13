@@ -51,35 +51,33 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
   };
 
   return (
-    <>
-      <View className="py-2">
+    <View className="flex w-full flex-col items-center justify-center gap-4">
+      <View className="">
         <Text className="font-semibold italic text-primary">
           What should we call you
         </Text>
       </View>
 
-      <View className="py-2">
-        <Controller
-          control={control}
-          rules={{
-            required: true,
-          }}
-          render={({ field: { onChange, onBlur, value } }) => (
-            <Input
-              onBlur={onBlur}
-              onChangeText={onChange}
-              value={value}
-              secureTextEntry={true}
-            />
-          )}
-          name="name"
-        />
-        {errors.name && <Text>{errors.name.message}</Text>}
+      <Controller
+        control={control}
+        rules={{
+          required: true,
+        }}
+        render={({ field: { onChange, onBlur, value } }) => (
+          <Input
+            onBlur={onBlur}
+            onChangeText={onChange}
+            value={value}
+            className="w-full"
+          />
+        )}
+        name="name"
+      />
+      {errors.name && <Text>{errors.name.message}</Text>}
 
-        <Button onPress={handleSubmit(onSubmit)}>
-          <Text>Set your Password</Text>
-        </Button>
-      </View>
-    </>
+      <Button onPress={handleSubmit(onSubmit)} className="w-full">
+        <Text>Set your Password</Text>
+      </Button>
+    </View>
   );
 }

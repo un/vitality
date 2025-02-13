@@ -1,12 +1,10 @@
-import { View } from "react-native";
+import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Stack, Tabs, useRouter } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { useLiveQuery } from "drizzle-orm/expo-sqlite";
 
-import { Header } from "~/components/nav/header";
 import { Button } from "~/components/ui/button";
-import { Text } from "~/components/ui/text";
 import { useDB } from "~/db";
 import { tasks, userProfile } from "~/db/schema";
 import { SECURE_STORE_KEY } from "~/utils/constants/security";
@@ -26,36 +24,37 @@ export default function Index() {
     });
   }
 
-  async function resetTasks() {
-    await db.delete(tasks);
-  }
-  async function resetAccount() {
-    await SecureStore.deleteItemAsync(SECURE_STORE_KEY);
-    await db.delete(userProfile);
-    await db.delete(tasks);
-    router.replace("/");
-  }
+  // async function resetAccount() {
+  //   await SecureStore.deleteItemAsync(SECURE_STORE_KEY);
+  //   await db.delete(userProfile);
+  //   await db.delete(tasks);
+  //   router.replace("/");
+  // }
 
   return (
-    <SafeAreaView className="bg-sand-3 flex h-full w-full flex-col items-center justify-center gap-8">
-      <Tabs.Screen options={{ header: () => <Header /> }} />
-      <View className="h-full w-full p-4">
-        <Text className="pb-2 text-center text-5xl font-bold">Augmented</Text>
-        <Button onPress={resetTasks}>
-          <Text>Reset tasks</Text>
-        </Button>
+    <SafeAreaView className="bg-sand-1">
+      {/* Changes page title visible on the header */}
+      <Stack.Screen options={{ title: "Home Page" }} />
+      <View className="h-full w-full bg-background p-4">
+        <Text className="pb-2 text-center text-5xl font-bold text-foreground">
+          Create <Text className="text-primary">T3</Text> Turbo
+        </Text>
 
         <View className="py-2">
-          <Text className="font-semibold italic">Press on a post</Text>
+          <Text className="font-semibold italic text-primary">
+            Press on a post
+          </Text>
         </View>
         <View className="py-2">
           {data.map((task) => (
-            <Text key={task.id} className="font-semibold italic">
+            <Text key={task.id} className="font-semibold italic text-primary">
               {task.title}
             </Text>
           ))}
           {!data.length && (
-            <Text className="font-semibold italic">No tasks yet</Text>
+            <Text className="font-semibold italic text-primary">
+              No tasks yet
+            </Text>
           )}
         </View>
         <View className="py-2">

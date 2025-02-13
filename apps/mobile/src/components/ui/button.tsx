@@ -1,7 +1,7 @@
 import type { VariantProps } from "class-variance-authority";
 import * as React from "react";
-import { Pressable, Text } from "react-native";
-import { TextClassContext } from "@/components/ui/text";
+import { Pressable } from "react-native";
+import { Text, TextClassContext } from "@/components/ui/text";
 import { cva } from "class-variance-authority";
 
 import { cn } from "~/lib/utils";
@@ -35,12 +35,12 @@ const buttonVariants = cva(
 );
 
 const buttonTextVariants = cva(
-  "web:whitespace-nowrap native:text-base web:transition-colors text-sm font-medium text-foreground",
+  "web:whitespace-nowrap native:text-base web:transition-colors text-sm font-medium",
   {
     variants: {
       variant: {
-        default: "text-primary-foreground",
-        destructive: "text-destructive-foreground",
+        default: "text-sand-1",
+        destructive: "text-destructive-background",
         outline: "group-active:text-accent-foreground",
         secondary:
           "text-secondary-foreground group-active:text-secondary-foreground",

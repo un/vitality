@@ -10,62 +10,62 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		27832379F29E46F28E85BAEA /* JetBrainsMono-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F40C939DCFF8448EBE5EFFE0 /* JetBrainsMono-SemiBold.otf */; };
-		30A9450D5F9C4D32949AD6C2 /* JetBrainsMono-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4219DCFBE35D4DB18B69CD79 /* JetBrainsMono-Bold.otf */; };
-		317E76165A36452391C9B53C /* JetBrainsMono-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 708510C9F1BB4ACDB52C1786 /* JetBrainsMono-BoldItalic.otf */; };
-		31B0D757A2A44B449882FF19 /* JetBrainsMono-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBCA013BEDF8425B80C6E1BA /* JetBrainsMono-Light.otf */; };
-		38E3107165C949078D7F10F1 /* JetBrainsMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13F471312F674124952EC0C1 /* JetBrainsMono-Regular.otf */; };
+		185BD90698FE4A40B2B41A16 /* JetBrainsMono-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CAD4F08C6F3243B5B4C811D8 /* JetBrainsMono-Italic.otf */; };
+		27F679874C504E5AACB0112A /* JetBrainsMono-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 95F6B79B330446FFAB066FFF /* JetBrainsMono-ExtraLight.otf */; };
+		2D478B163FE04036AD3D8C8B /* JetBrainsMono-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7D3794294DE14702A926D6BB /* JetBrainsMono-Light.otf */; };
+		2FFBD82BE7BB44EFB8D94611 /* JetBrainsMono-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6B6AD51309746D5B89AE911 /* JetBrainsMono-LightItalic.otf */; };
+		3517BA23A726473C8E6E5F65 /* JetBrainsMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E294D4EE40B74B7494635765 /* JetBrainsMono-Regular.otf */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		4B54D8DBE4424629A9C5844E /* JetBrainsMono-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63629D7C846B4435AC36C2E7 /* JetBrainsMono-ThinItalic.otf */; };
-		671DC285308B479B85DF6761 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C0AF97E9364645BE941F15 /* noop-file.swift */; };
-		6FE4B7673D4B46A18BF2193D /* JetBrainsMono-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74E63BD7A01844358695CFF5 /* JetBrainsMono-Italic.otf */; };
-		762554E43AA57DC02A050FDB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DA214C65639BE23A69306FCD /* PrivacyInfo.xcprivacy */; };
+		5EA98BE7F95F438AAEDDD8F0 /* JetBrainsMono-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42CE4333EF884D08AA49F1B0 /* JetBrainsMono-ExtraBoldItalic.otf */; };
+		68CF2B9810AB4DFB9978E2AD /* JetBrainsMono-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D02F20D0449B4F2D82133075 /* JetBrainsMono-ThinItalic.otf */; };
+		73B3E6B33B8C4A7094884737 /* JetBrainsMono-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 53CB931A4BBF4C83826C08C4 /* JetBrainsMono-SemiBoldItalic.otf */; };
+		766A561CEC91435D81393FC3 /* JetBrainsMono-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32CBF041043F458D9939B906 /* JetBrainsMono-ExtraBold.otf */; };
+		7A9C176B786C4958B52DDBB8 /* JetBrainsMono-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D3DB993E2F945D3A3AC7AD8 /* JetBrainsMono-Thin.otf */; };
+		866AE20D6758488F89CEB9F3 /* JetBrainsMono-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC96296430A44873BED07C4D /* JetBrainsMono-ExtraLightItalic.otf */; };
+		8DBEC9CCA76F408C80989671 /* JetBrainsMono-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2715515690B46288C142DF8 /* JetBrainsMono-MediumItalic.otf */; };
+		8E0649B0BFE84143A43CAF32 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D766F09A944C2B93160821 /* noop-file.swift */; };
 		96905EF65AED1B983A6B3ABC /* libPods-Augmented.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Augmented.a */; };
-		ADF7F2F36B2246A8B3F3E5B2 /* JetBrainsMono-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CC6732D96E443DEB06598AA /* JetBrainsMono-LightItalic.otf */; };
+		9ADFB622C5504EF3874C6739 /* JetBrainsMono-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F65D705E0E3D4788BFC79746 /* JetBrainsMono-BoldItalic.otf */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		C362E4C65FC9427895344A80 /* JetBrainsMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77158B275AB14DE6AB14419A /* JetBrainsMono-Medium.otf */; };
-		CE2D7E0FF62A46C391EB7C8D /* JetBrainsMono-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAA8C450065C4419B130AF7C /* JetBrainsMono-Thin.otf */; };
-		CE36AA6087BB4A2F92D2FCB2 /* JetBrainsMono-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6423DEF9B2954194BE8E80D6 /* JetBrainsMono-SemiBoldItalic.otf */; };
-		D2E6434E5A964000BEDA6129 /* JetBrainsMono-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EB2A9C9490F4D9AA0DD3884 /* JetBrainsMono-ExtraLightItalic.otf */; };
-		E2BAB64774604B2C84637616 /* JetBrainsMono-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F32F3BD772CB473F8B29C57A /* JetBrainsMono-ExtraBoldItalic.otf */; };
-		EB2D23BCBE6B4195AE12DD82 /* JetBrainsMono-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 344C1E0C67B247F68F3A4E20 /* JetBrainsMono-MediumItalic.otf */; };
-		F32D0D4EAADC4986BCD91E2D /* JetBrainsMono-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AB1977C839647959208334F /* JetBrainsMono-ExtraBold.otf */; };
-		FFF1F61874BA47C89F1B135F /* JetBrainsMono-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80F0AEE3159949D4B4F926B7 /* JetBrainsMono-ExtraLight.otf */; };
+		BBA51DFC0F0E4477B71783FA /* JetBrainsMono-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5D37D0C7C5E74A3DA6C65581 /* JetBrainsMono-Bold.otf */; };
+		DF0AE9E4757956D859DB3A99 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E0AE932E9E5DE12C212266BB /* PrivacyInfo.xcprivacy */; };
+		E7AB1A7E5F1140A0B1134A2F /* JetBrainsMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BC2EC4F6B2AD484AA93E1E44 /* JetBrainsMono-Medium.otf */; };
+		F5A3C1CF217541568F4571BD /* JetBrainsMono-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C651B644964466B83EE0788 /* JetBrainsMono-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		119A61DC23FF486384C3EE53 /* Augmented-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Augmented-Bridging-Header.h"; path = "Augmented/Augmented-Bridging-Header.h"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Augmented.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Augmented.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Augmented/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Augmented/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Augmented/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Augmented/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Augmented/main.m; sourceTree = "<group>"; };
-		13F471312F674124952EC0C1 /* JetBrainsMono-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Regular.otf"; path = "../assets/fonts/JetBrainsMono-Regular.otf"; sourceTree = "<group>"; };
-		2CC6732D96E443DEB06598AA /* JetBrainsMono-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-LightItalic.otf"; path = "../assets/fonts/JetBrainsMono-LightItalic.otf"; sourceTree = "<group>"; };
-		344C1E0C67B247F68F3A4E20 /* JetBrainsMono-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-MediumItalic.otf"; path = "../assets/fonts/JetBrainsMono-MediumItalic.otf"; sourceTree = "<group>"; };
-		3AB1977C839647959208334F /* JetBrainsMono-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraBold.otf"; path = "../assets/fonts/JetBrainsMono-ExtraBold.otf"; sourceTree = "<group>"; };
-		3EB2A9C9490F4D9AA0DD3884 /* JetBrainsMono-ExtraLightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraLightItalic.otf"; path = "../assets/fonts/JetBrainsMono-ExtraLightItalic.otf"; sourceTree = "<group>"; };
-		4219DCFBE35D4DB18B69CD79 /* JetBrainsMono-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Bold.otf"; path = "../assets/fonts/JetBrainsMono-Bold.otf"; sourceTree = "<group>"; };
+		32CBF041043F458D9939B906 /* JetBrainsMono-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraBold.otf"; path = "../assets/fonts/JetBrainsMono-ExtraBold.otf"; sourceTree = "<group>"; };
+		42CE4333EF884D08AA49F1B0 /* JetBrainsMono-ExtraBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraBoldItalic.otf"; path = "../assets/fonts/JetBrainsMono-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		53CB931A4BBF4C83826C08C4 /* JetBrainsMono-SemiBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-SemiBoldItalic.otf"; path = "../assets/fonts/JetBrainsMono-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Augmented.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Augmented.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63629D7C846B4435AC36C2E7 /* JetBrainsMono-ThinItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ThinItalic.otf"; path = "../assets/fonts/JetBrainsMono-ThinItalic.otf"; sourceTree = "<group>"; };
-		6423DEF9B2954194BE8E80D6 /* JetBrainsMono-SemiBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-SemiBoldItalic.otf"; path = "../assets/fonts/JetBrainsMono-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		5D37D0C7C5E74A3DA6C65581 /* JetBrainsMono-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Bold.otf"; path = "../assets/fonts/JetBrainsMono-Bold.otf"; sourceTree = "<group>"; };
+		63D766F09A944C2B93160821 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Augmented/noop-file.swift"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-Augmented.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Augmented.debug.xcconfig"; path = "Target Support Files/Pods-Augmented/Pods-Augmented.debug.xcconfig"; sourceTree = "<group>"; };
-		708510C9F1BB4ACDB52C1786 /* JetBrainsMono-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-BoldItalic.otf"; path = "../assets/fonts/JetBrainsMono-BoldItalic.otf"; sourceTree = "<group>"; };
-		74E63BD7A01844358695CFF5 /* JetBrainsMono-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Italic.otf"; path = "../assets/fonts/JetBrainsMono-Italic.otf"; sourceTree = "<group>"; };
-		77158B275AB14DE6AB14419A /* JetBrainsMono-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Medium.otf"; path = "../assets/fonts/JetBrainsMono-Medium.otf"; sourceTree = "<group>"; };
+		6D3DB993E2F945D3A3AC7AD8 /* JetBrainsMono-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Thin.otf"; path = "../assets/fonts/JetBrainsMono-Thin.otf"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-Augmented.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Augmented.release.xcconfig"; path = "Target Support Files/Pods-Augmented/Pods-Augmented.release.xcconfig"; sourceTree = "<group>"; };
-		80F0AEE3159949D4B4F926B7 /* JetBrainsMono-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraLight.otf"; path = "../assets/fonts/JetBrainsMono-ExtraLight.otf"; sourceTree = "<group>"; };
-		A7C0AF97E9364645BE941F15 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Augmented/noop-file.swift"; sourceTree = "<group>"; };
+		7D3794294DE14702A926D6BB /* JetBrainsMono-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Light.otf"; path = "../assets/fonts/JetBrainsMono-Light.otf"; sourceTree = "<group>"; };
+		95F6B79B330446FFAB066FFF /* JetBrainsMono-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraLight.otf"; path = "../assets/fonts/JetBrainsMono-ExtraLight.otf"; sourceTree = "<group>"; };
+		9C651B644964466B83EE0788 /* JetBrainsMono-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-SemiBold.otf"; path = "../assets/fonts/JetBrainsMono-SemiBold.otf"; sourceTree = "<group>"; };
+		A6B6AD51309746D5B89AE911 /* JetBrainsMono-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-LightItalic.otf"; path = "../assets/fonts/JetBrainsMono-LightItalic.otf"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = Augmented/SplashScreen.storyboard; sourceTree = "<group>"; };
+		B2715515690B46288C142DF8 /* JetBrainsMono-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-MediumItalic.otf"; path = "../assets/fonts/JetBrainsMono-MediumItalic.otf"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		DA214C65639BE23A69306FCD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Augmented/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		EAA8C450065C4419B130AF7C /* JetBrainsMono-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Thin.otf"; path = "../assets/fonts/JetBrainsMono-Thin.otf"; sourceTree = "<group>"; };
-		EBCA013BEDF8425B80C6E1BA /* JetBrainsMono-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Light.otf"; path = "../assets/fonts/JetBrainsMono-Light.otf"; sourceTree = "<group>"; };
+		BC2EC4F6B2AD484AA93E1E44 /* JetBrainsMono-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Medium.otf"; path = "../assets/fonts/JetBrainsMono-Medium.otf"; sourceTree = "<group>"; };
+		CAD4F08C6F3243B5B4C811D8 /* JetBrainsMono-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Italic.otf"; path = "../assets/fonts/JetBrainsMono-Italic.otf"; sourceTree = "<group>"; };
+		D02F20D0449B4F2D82133075 /* JetBrainsMono-ThinItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ThinItalic.otf"; path = "../assets/fonts/JetBrainsMono-ThinItalic.otf"; sourceTree = "<group>"; };
+		E0AE932E9E5DE12C212266BB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Augmented/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		E294D4EE40B74B7494635765 /* JetBrainsMono-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Regular.otf"; path = "../assets/fonts/JetBrainsMono-Regular.otf"; sourceTree = "<group>"; };
+		EC96296430A44873BED07C4D /* JetBrainsMono-ExtraLightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraLightItalic.otf"; path = "../assets/fonts/JetBrainsMono-ExtraLightItalic.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F32F3BD772CB473F8B29C57A /* JetBrainsMono-ExtraBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-ExtraBoldItalic.otf"; path = "../assets/fonts/JetBrainsMono-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
-		F40C939DCFF8448EBE5EFFE0 /* JetBrainsMono-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-SemiBold.otf"; path = "../assets/fonts/JetBrainsMono-SemiBold.otf"; sourceTree = "<group>"; };
+		ED4CA301025140A4B8E375F0 /* Augmented-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Augmented-Bridging-Header.h"; path = "Augmented/Augmented-Bridging-Header.h"; sourceTree = "<group>"; };
+		F65D705E0E3D4788BFC79746 /* JetBrainsMono-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-BoldItalic.otf"; path = "../assets/fonts/JetBrainsMono-BoldItalic.otf"; sourceTree = "<group>"; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Augmented/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,9 +91,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				A7C0AF97E9364645BE941F15 /* noop-file.swift */,
-				119A61DC23FF486384C3EE53 /* Augmented-Bridging-Header.h */,
-				DA214C65639BE23A69306FCD /* PrivacyInfo.xcprivacy */,
+				63D766F09A944C2B93160821 /* noop-file.swift */,
+				ED4CA301025140A4B8E375F0 /* Augmented-Bridging-Header.h */,
+				E0AE932E9E5DE12C212266BB /* PrivacyInfo.xcprivacy */,
 			);
 			name = Augmented;
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
-				8664A4FBADE34E3C90A61318 /* Resources */,
+				AA811CBD7A324CC3BDC2955C /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,36 +138,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8664A4FBADE34E3C90A61318 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4219DCFBE35D4DB18B69CD79 /* JetBrainsMono-Bold.otf */,
-				708510C9F1BB4ACDB52C1786 /* JetBrainsMono-BoldItalic.otf */,
-				3AB1977C839647959208334F /* JetBrainsMono-ExtraBold.otf */,
-				F32F3BD772CB473F8B29C57A /* JetBrainsMono-ExtraBoldItalic.otf */,
-				80F0AEE3159949D4B4F926B7 /* JetBrainsMono-ExtraLight.otf */,
-				3EB2A9C9490F4D9AA0DD3884 /* JetBrainsMono-ExtraLightItalic.otf */,
-				EBCA013BEDF8425B80C6E1BA /* JetBrainsMono-Light.otf */,
-				2CC6732D96E443DEB06598AA /* JetBrainsMono-LightItalic.otf */,
-				77158B275AB14DE6AB14419A /* JetBrainsMono-Medium.otf */,
-				344C1E0C67B247F68F3A4E20 /* JetBrainsMono-MediumItalic.otf */,
-				F40C939DCFF8448EBE5EFFE0 /* JetBrainsMono-SemiBold.otf */,
-				6423DEF9B2954194BE8E80D6 /* JetBrainsMono-SemiBoldItalic.otf */,
-				EAA8C450065C4419B130AF7C /* JetBrainsMono-Thin.otf */,
-				63629D7C846B4435AC36C2E7 /* JetBrainsMono-ThinItalic.otf */,
-				13F471312F674124952EC0C1 /* JetBrainsMono-Regular.otf */,
-				74E63BD7A01844358695CFF5 /* JetBrainsMono-Italic.otf */,
-			);
-			name = Resources;
-			path = "";
-			sourceTree = "<group>";
-		};
 		92DBD88DE9BF7D494EA9DA96 /* Augmented */ = {
 			isa = PBXGroup;
 			children = (
 				FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */,
 			);
 			name = Augmented;
+			sourceTree = "<group>";
+		};
+		AA811CBD7A324CC3BDC2955C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D37D0C7C5E74A3DA6C65581 /* JetBrainsMono-Bold.otf */,
+				F65D705E0E3D4788BFC79746 /* JetBrainsMono-BoldItalic.otf */,
+				32CBF041043F458D9939B906 /* JetBrainsMono-ExtraBold.otf */,
+				42CE4333EF884D08AA49F1B0 /* JetBrainsMono-ExtraBoldItalic.otf */,
+				95F6B79B330446FFAB066FFF /* JetBrainsMono-ExtraLight.otf */,
+				EC96296430A44873BED07C4D /* JetBrainsMono-ExtraLightItalic.otf */,
+				7D3794294DE14702A926D6BB /* JetBrainsMono-Light.otf */,
+				A6B6AD51309746D5B89AE911 /* JetBrainsMono-LightItalic.otf */,
+				BC2EC4F6B2AD484AA93E1E44 /* JetBrainsMono-Medium.otf */,
+				B2715515690B46288C142DF8 /* JetBrainsMono-MediumItalic.otf */,
+				9C651B644964466B83EE0788 /* JetBrainsMono-SemiBold.otf */,
+				53CB931A4BBF4C83826C08C4 /* JetBrainsMono-SemiBoldItalic.otf */,
+				6D3DB993E2F945D3A3AC7AD8 /* JetBrainsMono-Thin.otf */,
+				D02F20D0449B4F2D82133075 /* JetBrainsMono-ThinItalic.otf */,
+				E294D4EE40B74B7494635765 /* JetBrainsMono-Regular.otf */,
+				CAD4F08C6F3243B5B4C811D8 /* JetBrainsMono-Italic.otf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
@@ -204,13 +204,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Augmented" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				C0A75556CC35C67189DDCC35 /* [Expo] Configure project */,
+				62C730EB755DF13FC9271942 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				D248C639B6CC99A773273D4E /* [CP] Embed Pods Frameworks */,
+				AA3F0515544FB8F903C1EDA1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,23 +260,23 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				30A9450D5F9C4D32949AD6C2 /* JetBrainsMono-Bold.otf in Resources */,
-				317E76165A36452391C9B53C /* JetBrainsMono-BoldItalic.otf in Resources */,
-				F32D0D4EAADC4986BCD91E2D /* JetBrainsMono-ExtraBold.otf in Resources */,
-				E2BAB64774604B2C84637616 /* JetBrainsMono-ExtraBoldItalic.otf in Resources */,
-				FFF1F61874BA47C89F1B135F /* JetBrainsMono-ExtraLight.otf in Resources */,
-				D2E6434E5A964000BEDA6129 /* JetBrainsMono-ExtraLightItalic.otf in Resources */,
-				31B0D757A2A44B449882FF19 /* JetBrainsMono-Light.otf in Resources */,
-				ADF7F2F36B2246A8B3F3E5B2 /* JetBrainsMono-LightItalic.otf in Resources */,
-				C362E4C65FC9427895344A80 /* JetBrainsMono-Medium.otf in Resources */,
-				EB2D23BCBE6B4195AE12DD82 /* JetBrainsMono-MediumItalic.otf in Resources */,
-				27832379F29E46F28E85BAEA /* JetBrainsMono-SemiBold.otf in Resources */,
-				CE36AA6087BB4A2F92D2FCB2 /* JetBrainsMono-SemiBoldItalic.otf in Resources */,
-				CE2D7E0FF62A46C391EB7C8D /* JetBrainsMono-Thin.otf in Resources */,
-				4B54D8DBE4424629A9C5844E /* JetBrainsMono-ThinItalic.otf in Resources */,
-				38E3107165C949078D7F10F1 /* JetBrainsMono-Regular.otf in Resources */,
-				6FE4B7673D4B46A18BF2193D /* JetBrainsMono-Italic.otf in Resources */,
-				762554E43AA57DC02A050FDB /* PrivacyInfo.xcprivacy in Resources */,
+				BBA51DFC0F0E4477B71783FA /* JetBrainsMono-Bold.otf in Resources */,
+				9ADFB622C5504EF3874C6739 /* JetBrainsMono-BoldItalic.otf in Resources */,
+				766A561CEC91435D81393FC3 /* JetBrainsMono-ExtraBold.otf in Resources */,
+				5EA98BE7F95F438AAEDDD8F0 /* JetBrainsMono-ExtraBoldItalic.otf in Resources */,
+				27F679874C504E5AACB0112A /* JetBrainsMono-ExtraLight.otf in Resources */,
+				866AE20D6758488F89CEB9F3 /* JetBrainsMono-ExtraLightItalic.otf in Resources */,
+				2D478B163FE04036AD3D8C8B /* JetBrainsMono-Light.otf in Resources */,
+				2FFBD82BE7BB44EFB8D94611 /* JetBrainsMono-LightItalic.otf in Resources */,
+				E7AB1A7E5F1140A0B1134A2F /* JetBrainsMono-Medium.otf in Resources */,
+				8DBEC9CCA76F408C80989671 /* JetBrainsMono-MediumItalic.otf in Resources */,
+				F5A3C1CF217541568F4571BD /* JetBrainsMono-SemiBold.otf in Resources */,
+				73B3E6B33B8C4A7094884737 /* JetBrainsMono-SemiBoldItalic.otf in Resources */,
+				7A9C176B786C4958B52DDBB8 /* JetBrainsMono-Thin.otf in Resources */,
+				68CF2B9810AB4DFB9978E2AD /* JetBrainsMono-ThinItalic.otf in Resources */,
+				3517BA23A726473C8E6E5F65 /* JetBrainsMono-Regular.otf in Resources */,
+				185BD90698FE4A40B2B41A16 /* JetBrainsMono-Italic.otf in Resources */,
+				DF0AE9E4757956D859DB3A99 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,45 +320,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Augmented/Pods-Augmented-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/ExpoConstants_privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/RCT-Folly/RCT-Folly_privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/RNSVG/RNSVGFilters.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/React-Core_privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact/React-cxxreact_privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/boost/boost_privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-launcher/EXDevLauncher.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-menu/EXDevMenu.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/glog/glog_privacy.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXConstants.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoConstants_privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoFileSystem_privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCT-Folly_privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNSVGFilters.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-Core_privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-cxxreact_privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/boost_privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXDevLauncher.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXDevMenu.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/glog_privacy.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Augmented/Pods-Augmented-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C0A75556CC35C67189DDCC35 /* [Expo] Configure project */ = {
+		62C730EB755DF13FC9271942 /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -377,7 +339,49 @@
 			shellPath = /bin/sh;
 			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-Augmented/expo-configure-project.sh\"\n";
 		};
-		D248C639B6CC99A773273D4E /* [CP] Embed Pods Frameworks */ = {
+		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Augmented/Pods-Augmented-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/ExpoConstants_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXUpdates/EXUpdates.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RCT-Folly/RCT-Folly_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNSVG/RNSVGFilters.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/ReachabilitySwift.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/React-Core_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact/React-cxxreact_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/boost/boost_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-launcher/EXDevLauncher.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-menu/EXDevMenu.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/glog/glog_privacy.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXConstants.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoConstants_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXUpdates.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoFileSystem_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCT-Folly_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNSVGFilters.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ReachabilitySwift.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-Core_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-cxxreact_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/boost_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXDevLauncher.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXDevMenu.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/glog_privacy.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Augmented/Pods-Augmented-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA3F0515544FB8F903C1EDA1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -407,7 +411,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				671DC285308B479B85DF6761 /* noop-file.swift in Sources */,
+				8E0649B0BFE84143A43CAF32 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@ import { blob, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { uiColors } from "~/utils/uiColors";
 
 export const userProfile = sqliteTable("user_profile", {
-  name: text("name"),
+  id: integer("id", { mode: "number" }).default(sql`(1)`),
   signupDate: integer("signupDate", { mode: "timestamp" }).default(
     sql`(CURRENT_TIMESTAMP)`,
   ),
@@ -14,6 +14,14 @@ export const userProfile = sqliteTable("user_profile", {
   currentStreakDays: integer("currentStreakDays", { mode: "number" }),
   longestStreakDays: integer("longestStreakDays", { mode: "number" }),
   avatarImage: blob("avatarImage"),
+  name: text("name"),
+  goals: text("goals"),
+  who: text("whoAreYou"),
+  following: text("whoDoYouFollow"),
+  currentActivities: text("whatDoYouAlreadyDo"),
+  conditions: text("conditions"),
+  customAiName: text("customAiName"),
+  onboardingCompleted: integer("onboardingCompleted", { mode: "boolean" }),
 });
 
 export const dataGroups = sqliteTable("data_groups", {

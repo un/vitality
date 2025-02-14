@@ -7,12 +7,11 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   scheme: "augmented",
   version: "0.1.0",
   orientation: "portrait",
-  icon: "./assets/icon.png",
+  icon: "./assets/images/icon.png",
   userInterfaceStyle: "automatic",
   splash: {
-    image: "./assets/icon.png",
-    resizeMode: "contain",
-    backgroundColor: "#1F104A",
+    image: "./assets/images/splash-icon-dark.png",
+    backgroundColor: "#222221",
   },
   updates: {
     fallbackToCacheTimeout: 0,
@@ -28,8 +27,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   android: {
     package: "com.augmentedhq",
     adaptiveIcon: {
-      foregroundImage: "./assets/icon.png",
-      backgroundColor: "#1F104A",
+      foregroundImage: "./assets/images/splash-icon-dark.png",
+      backgroundColor: "#222221",
     },
   },
   // extra: {

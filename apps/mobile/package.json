@@ -49,6 +49,7 @@
     "expo-splash-screen": "~0.29.21",
     "expo-sqlite": "~15.1.2",
     "expo-status-bar": "~2.0.1",
+    "expo-updates": "^0.26.18",
     "expo-web-browser": "^14.0.2",
     "nativewind": "~4.1.23",
     "phosphor-react-native": "^2.3.1",

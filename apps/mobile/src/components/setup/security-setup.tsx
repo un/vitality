@@ -27,7 +27,6 @@ export default function SecuritySetup({ onComplete }: SecuritySetupProps) {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
     resolver: zodResolver(newPasswordSchema),
     defaultValues: {
       password: "",
@@ -43,7 +42,7 @@ export default function SecuritySetup({ onComplete }: SecuritySetupProps) {
   return (
     <View className="flex flex-col items-center justify-center gap-4">
       <Text className="font-semibold italic text-primary">
-        Set a password to encrypt your data
+        Set a keyphrase to encrypt your data
       </Text>
 
       <Controller
@@ -69,13 +68,18 @@ export default function SecuritySetup({ onComplete }: SecuritySetupProps) {
         loading={isLoading}
         className="w-full"
       >
-        <Text>Set your Password</Text>
+        <Text>Set your Keyphrase</Text>
       </Button>
 
-      <Text className="pt-4 text-sm text-primary">
-        Tip: Store it securely, if you forget the password, your account CAN NOT
-        be recovered and will need to be created again!
-      </Text>
+      <View className="flex flex-col gap-2">
+        <Text className="max-w-72 pt-4 text-sm text-primary">
+          Tip: Make it hard to guess and store it securely.
+        </Text>
+        <Text className="max-w-72 text-sm text-primary">
+          If you forget the keyphrase, your account CAN NOT be recovered and
+          will need to be created again!
+        </Text>
+      </View>
     </View>
   );
 }

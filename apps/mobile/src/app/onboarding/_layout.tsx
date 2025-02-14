@@ -1,13 +1,10 @@
 import { Suspense } from "react";
-import { ActivityIndicator, StatusBar, View } from "react-native";
-import { router, Tabs } from "expo-router";
+import { ActivityIndicator, StatusBar } from "react-native";
+import { router, Stack } from "expo-router";
 import * as SecureStore from "expo-secure-store";
 import { SQLiteProvider } from "expo-sqlite";
 import { DB_NAME } from "@/utils/constants/db";
 import { SECURE_STORE_KEY } from "@/utils/constants/security";
-import { ChartScatter, Speedometer } from "phosphor-react-native";
-
-import { Text } from "~/components/ui/text";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -36,26 +33,9 @@ export default function RootLayout() {
         }}
         useSuspense
       >
-        <Tabs>
-          <Tabs.Screen
-            name="index"
-            options={{
-              title: "Home",
-              tabBarIcon: () => (
-                <Speedometer size={24} weight="bold" color="white" />
-              ),
-            }}
-          />
-          <Tabs.Screen
-            name="tasks"
-            options={{
-              title: "Data",
-              tabBarIcon: () => (
-                <ChartScatter size={24} weight="bold" color="white" />
-              ),
-            }}
-          />
-        </Tabs>
+        <Stack>
+          <Stack.Screen name="index" />
+        </Stack>
         <StatusBar />
       </SQLiteProvider>
     </Suspense>

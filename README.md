@@ -4,6 +4,13 @@ The Open Source Ai Agent to make you live Longer, Sharper and Better
 
 We are currently focusing on our iOS Build
 
+Initial integrations:
+
+- Apple Health (Apple Watch Data)
+- Oura ring (API Access)
+- Whoop strap (API Access)
+- UltraHuman Ring (requires applying to waitlist for sdk)
+
 to run in dev mode:
 
 1. Ensure you have XCode installed on your system with a version of iPhone IOS downloaded

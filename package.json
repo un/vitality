@@ -1,11 +1,12 @@
 {
   "name": "augmented",
+  "version": "1.0.0",
   "private": true,
   "engines": {
     "node": ">=22.10.0",
-    "pnpm": "^9.15.4"
+    "pnpm": "^10.5.0"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.5.0",
   "scripts": {
     "build": "turbo run build",
     "clean": "git clean -xdf node_modules",
@@ -28,19 +29,10 @@
   },
   "devDependencies": {
     "@augmented/prettier-config": "workspace:*",
-    "@turbo/gen": "^2.3.4",
-    "expo": "~52.0.31",
+    "@turbo/gen": "^2.4.4",
     "prettier": "catalog:",
-    "react": "18.3.1",
-    "react-native": "0.76.7",
-    "turbo": "^2.3.4",
+    "turbo": "^2.4.4",
     "typescript": "catalog:"
   },
-  "prettier": "@augmented/prettier-config",
-  "version": "1.0.0",
-  "dependencies": {
-    "expo": "52.0.31",
-    "react": "18.3.1",
-    "react-native": "0.76.7"
-  }
+  "prettier": "@augmented/prettier-config"
 }

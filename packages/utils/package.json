@@ -21,8 +21,8 @@
     },
     "dependencies": {
         "itty-time": "^1.0.6",
-        "nanoid": "^5.0.9",
+        "nanoid": "^5.1.2",
         "typeid-js": "^1.2.0",
-        "zod": "^3.24.1"
+        "zod": "catalog:"
     }
 }

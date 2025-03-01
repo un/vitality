@@ -4,49 +4,52 @@ import { z } from "zod";
 
 export const TYPE_ID_LENGTH = 26;
 
-export const idTypesMapNameToPrefix = {
-  // all keys below are prefixed with `l` to dignify local data
+export const localIdTypesMapNameToPrefix = {
+  // all keys below are prefixed with `l` to signify local data
   dataGroup: "l_dg",
   dataGroupUnit: "l_dgu",
   dataGroupMeasurement: "l_dgm",
   dataGroupTarget: "l_dgt",
 } as const;
 
-type IdTypesMapNameToPrefix = typeof idTypesMapNameToPrefix;
-type IdTypesMapPrefixToName = {
-  [K in keyof IdTypesMapNameToPrefix as IdTypesMapNameToPrefix[K]]: K;
+type LocalIdTypesMapNameToPrefix = typeof localIdTypesMapNameToPrefix;
+type LocalIdTypesMapPrefixToName = {
+  [K in keyof LocalIdTypesMapNameToPrefix as LocalIdTypesMapNameToPrefix[K]]: K;
 };
 
-const idTypesMapPrefixToName = Object.fromEntries(
-  Object.entries(idTypesMapNameToPrefix).map(([x, y]) => [y, x]),
-) as IdTypesMapPrefixToName;
+const localIdTypesMapPrefixToName = Object.fromEntries(
+  Object.entries(localIdTypesMapNameToPrefix).map(([x, y]) => [y, x]),
+) as LocalIdTypesMapPrefixToName;
 
-export type IdTypePrefixNames = keyof typeof idTypesMapNameToPrefix;
-export type TypeId<T extends IdTypePrefixNames> =
-  `${IdTypesMapNameToPrefix[T]}_${string}`;
+export type LocalIdTypePrefixNames = keyof typeof localIdTypesMapNameToPrefix;
+export type LocalTypeId<T extends LocalIdTypePrefixNames> =
+  `${LocalIdTypesMapNameToPrefix[T]}_${string}`;
 
-export const typeIdValidator = <const T extends IdTypePrefixNames>(prefix: T) =>
+export const LocalTypeIdValidator = <const T extends LocalIdTypePrefixNames>(
+  prefix: T,
+) =>
   z
     .string()
-    .startsWith(`${idTypesMapNameToPrefix[prefix]}_`)
-    .length(TYPE_ID_LENGTH + idTypesMapNameToPrefix[prefix].length + 1) // suffix length + prefix length + underscore
+    .startsWith(`${localIdTypesMapNameToPrefix[prefix]}_`)
+    .length(TYPE_ID_LENGTH + localIdTypesMapNameToPrefix[prefix].length + 1) // suffix length + prefix length + underscore
     .transform(
       (input) =>
         TypeID.fromString(input)
-          .asType(idTypesMapNameToPrefix[prefix])
-          .toString() as TypeId<T>,
+          .asType(localIdTypesMapNameToPrefix[prefix])
+          .toString() as LocalTypeId<T>,
     );
 
-export const typeIdGenerator = <const T extends IdTypePrefixNames>(prefix: T) =>
-  typeid(idTypesMapNameToPrefix[prefix]).toString() as TypeId<T>;
+export const localTypeIdGenerator = <const T extends LocalIdTypePrefixNames>(
+  prefix: T,
+) => typeid(localIdTypesMapNameToPrefix[prefix]).toString() as LocalTypeId<T>;
 
-export const typeIdFromUUID = <const T extends IdTypePrefixNames>(
+export const localTypeIdFromUUID = <const T extends LocalIdTypePrefixNames>(
   prefix: T,
   uuid: string,
-) => TypeID.fromUUID(prefix, uuid).toString() as TypeId<T>;
+) => TypeID.fromUUID(prefix, uuid).toString() as LocalTypeId<T>;
 
-export const typeIdToUUID = <const T extends IdTypePrefixNames>(
-  input: TypeId<T>,
+export const localTypeIdToUUID = <const T extends LocalIdTypePrefixNames>(
+  input: LocalTypeId<T>,
 ) => {
   const id = fromString(input);
   return {
@@ -55,26 +58,30 @@ export const typeIdToUUID = <const T extends IdTypePrefixNames>(
   };
 };
 
-export const validateTypeId = <const T extends IdTypePrefixNames>(
+export const validateLocalTypeId = <const T extends LocalIdTypePrefixNames>(
   prefix: T,
   data: unknown,
-): data is TypeId<T> => typeIdValidator(prefix).safeParse(data).success;
+): data is LocalTypeId<T> =>
+  LocalTypeIdValidator(prefix).safeParse(data).success;
 
-export const inferTypeId = <T extends keyof IdTypesMapPrefixToName>(
+export const inferLocalTypeId = <T extends keyof LocalIdTypesMapPrefixToName>(
   input: `${T}_${string}`,
-) => idTypesMapPrefixToName[TypeID.fromString(input).getType() as T];
+) => localIdTypesMapPrefixToName[TypeID.fromString(input).getType() as T];
 
 // Drizzle Data Type for SQLlite
-export const typeIdDrizzleDataType = <const T extends IdTypePrefixNames>(
+export const localTypeIdDrizzleDataType = <
+  const T extends LocalIdTypePrefixNames,
+>(
   prefix: T,
   column: string,
 ) =>
   customType<{
-    data: TypeId<T>;
+    data: LocalTypeId<T>;
     notNull: true;
     driverData: string;
   }>({
     dataType: () => `text`,
-    fromDriver: (input) => TypeID.fromString(input).toString() as TypeId<T>,
+    fromDriver: (input) =>
+      TypeID.fromString(input).toString() as LocalTypeId<T>,
     toDriver: (input) => input.toString(),
   })(column);

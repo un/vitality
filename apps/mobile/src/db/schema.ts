@@ -1,4 +1,4 @@
-import { typeIdDrizzleDataType as typeIdColumn } from "@/utils/typeid";
+import { localTypeIdDrizzleDataType as typeIdColumn } from "@/utils/typeid";
 import { relations, sql } from "drizzle-orm";
 import { blob, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 

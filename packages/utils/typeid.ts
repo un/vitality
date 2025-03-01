@@ -1,65 +1,118 @@
-import { TypeID, typeid, toUUID, getType, fromString } from 'typeid-js';
-import { z } from 'zod';
+import {
+  fromString,
+  fromUUIDBytes,
+  getType,
+  toUUID,
+  toUUIDBytes,
+  TypeID,
+  typeid,
+} from "typeid-js";
+import { z } from "zod";
 
-const typeIdLength = 26;
+export const TYPE_ID_LENGTH = 26;
 
-export const idTypesMapNameToPrefix = {
+export const cloudIdTypesMapNameToPrefix = {
+  userProfile: "up",
+  integration: "i",
+  sleep: "s",
+  sleepRawData: "srd",
+  air: "a",
+  airRawData: "ard",
+  food: "f",
+  foodRawData: "frd",
+  drink: "d",
+  drinkRawData: "frd",
+
+  workout: "w",
+  workoutRawData: "wrd",
+
+  // Consumption related items
+  mineral: "cm",
+  vitamin: "cv",
+  supplementCombo: "csc",
+  supplementIngredient: "csi",
+  supplementVitamin: "csv",
+  supplementMineral: "csm",
+  supplement: "cs",
   // items starting with "ac" are account items
-  user: 'acu',
-  session: 'acs',
-  account: 'aca',
-  verification: 'acv',
-  passkey: 'acpk'
+  user: "acu",
+  session: "acs",
+  account: "aca",
+  verification: "acv",
+  passkey: "acpk",
 } as const;
 
-type IdTypesMapNameToPrefix = typeof idTypesMapNameToPrefix;
-type IdTypesMapPrefixToName = {
-  [K in keyof IdTypesMapNameToPrefix as IdTypesMapNameToPrefix[K]]: K;
+type CloudIdTypesMapNameToPrefix = typeof cloudIdTypesMapNameToPrefix;
+type CloudIdTypesMapPrefixToName = {
+  [K in keyof CloudIdTypesMapNameToPrefix as CloudIdTypesMapNameToPrefix[K]]: K;
 };
 
-const idTypesMapPrefixToName = Object.fromEntries(
-  Object.entries(idTypesMapNameToPrefix).map(([x, y]) => [y, x])
-) as IdTypesMapPrefixToName;
+const cloudIdTypesMapPrefixToName = Object.fromEntries(
+  Object.entries(cloudIdTypesMapNameToPrefix).map(([x, y]) => [y, x]),
+) as CloudIdTypesMapPrefixToName;
 
-export type IdTypePrefixNames = keyof typeof idTypesMapNameToPrefix;
-export type TypeId<T extends IdTypePrefixNames> =
-  `${IdTypesMapNameToPrefix[T]}_${string}`;
+export type CloudIdTypePrefixNames = keyof typeof cloudIdTypesMapNameToPrefix;
+export type CloudTypeId<T extends CloudIdTypePrefixNames> =
+  `${CloudIdTypesMapNameToPrefix[T]}_${string}`;
 
-export const typeIdValidator = <const T extends IdTypePrefixNames>(prefix: T) =>
+export const cloudTypeIdValidator = <const T extends CloudIdTypePrefixNames>(
+  prefix: T,
+) =>
   z
     .string()
-    .startsWith(`${idTypesMapNameToPrefix[prefix]}_`)
-    .length(typeIdLength + idTypesMapNameToPrefix[prefix].length + 1) // suffix length + prefix length + underscore
+    .startsWith(`${cloudIdTypesMapNameToPrefix[prefix]}_`)
+    .length(TYPE_ID_LENGTH + cloudIdTypesMapNameToPrefix[prefix].length + 1) // suffix length + prefix length + underscore
     .transform(
       (input) =>
         TypeID.fromString(input)
-          .asType(idTypesMapNameToPrefix[prefix])
-          .toString() as TypeId<T>
+          .asType(cloudIdTypesMapNameToPrefix[prefix])
+          .toString() as CloudTypeId<T>,
     );
 
-export const typeIdGenerator = <const T extends IdTypePrefixNames>(prefix: T) =>
-  typeid(idTypesMapNameToPrefix[prefix]).toString() as TypeId<T>;
-
-export const typeIdFromUUID = <const T extends IdTypePrefixNames>(
+export const cloudTypeIdGenerator = <const T extends CloudIdTypePrefixNames>(
   prefix: T,
-  uuid: string
-) => TypeID.fromUUID(prefix, uuid).toString() as TypeId<T>;
+) => typeid(cloudIdTypesMapNameToPrefix[prefix]).toString() as CloudTypeId<T>;
 
-export const typeIdToUUID = <const T extends IdTypePrefixNames>(
-  input: TypeId<T>
+export const cloudTypeIdFromUUID = <const T extends CloudIdTypePrefixNames>(
+  prefix: T,
+  uuid: string,
+) => TypeID.fromUUID(prefix, uuid).toString() as CloudTypeId<T>;
+
+export const cloudTypeIdToUUID = <const T extends CloudIdTypePrefixNames>(
+  input: CloudTypeId<T>,
 ) => {
   const id = fromString(input);
   return {
     uuid: toUUID(id).toString(),
-    prefix: getType(id)
+    prefix: getType(id),
   };
 };
 
-export const validateTypeId = <const T extends IdTypePrefixNames>(
+export const cloudTypeIdFromUUIDBytes = <
+  const T extends CloudIdTypePrefixNames,
+>(
   prefix: T,
-  data: unknown
-): data is TypeId<T> => typeIdValidator(prefix).safeParse(data).success;
+  uuid: Uint8Array<ArrayBufferLike>,
+) => {
+  return fromUUIDBytes(prefix, uuid) as CloudTypeId<T>;
+};
 
-export const inferTypeId = <T extends keyof IdTypesMapPrefixToName>(
-  input: `${T}_${string}`
-) => idTypesMapPrefixToName[TypeID.fromString(input).getType() as T];
+export const cloudTypeIdToUUIDBytes = <const T extends CloudIdTypePrefixNames>(
+  input: CloudTypeId<T>,
+) => {
+  const id = fromString(input);
+  return {
+    uuid: toUUIDBytes(id),
+    prefix: getType(id),
+  };
+};
+
+export const validateCloudTypeId = <const T extends CloudIdTypePrefixNames>(
+  prefix: T,
+  data: unknown,
+): data is CloudTypeId<T> =>
+  cloudTypeIdValidator(prefix).safeParse(data).success;
+
+export const inferCloudTypeId = <T extends keyof CloudIdTypesMapPrefixToName>(
+  input: `${T}_${string}`,
+) => cloudIdTypesMapPrefixToName[TypeID.fromString(input).getType() as T];

@@ -1,0 +1,20 @@
+{
+  "name": "@augmented/auth",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "auth:generate": "drizzle-kit push"
+  },
+  "dependencies": {
+    "@augmented/database": "workspace:*",
+    "better-auth": "^1.1.7",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "tsx": "^4.18.0"
+  }
+}

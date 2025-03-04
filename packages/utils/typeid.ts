@@ -12,34 +12,39 @@ import { z } from "zod";
 export const TYPE_ID_LENGTH = 26;
 
 export const cloudIdTypesMapNameToPrefix = {
-  userProfile: "up",
-  integration: "i",
-  sleep: "s",
-  sleepRawData: "srd",
-  air: "a",
-  airRawData: "ard",
-  food: "f",
-  foodRawData: "frd",
-  drink: "d",
-  drinkRawData: "frd",
-
-  workout: "w",
-  workoutRawData: "wrd",
-
-  // Consumption related items
-  mineral: "cm",
-  vitamin: "cv",
-  supplementCombo: "csc",
-  supplementIngredient: "csi",
-  supplementVitamin: "csv",
-  supplementMineral: "csm",
-  supplement: "cs",
-  // items starting with "ac" are account items
+  //air
+  airReading: "ar",
+  //auth ACX
   user: "acu",
   session: "acs",
   account: "aca",
   verification: "acv",
-  passkey: "acpk",
+  passkey: "acp",
+
+  //consumption CXX
+  ingredientLibrary: "cil",
+  ingredientNutrition: "cni",
+  ingredientVitamin: "cvi",
+  ingredientMineral: "cmi",
+  consumableItem: "ci",
+  consumableItemIngredient: "cii",
+  consumableItemNutrition: "cin",
+  consumableItemVitamin: "civ",
+  consumableItemMineral: "cim",
+  consumptionLog: "cl",
+  consumptionLogIngredient: "cli",
+  consumptionLogNutrition: "cln",
+  consumptionLogVitamin: "clv",
+  consumptionLogMineral: "clm",
+  //integration iXX
+  integration: "i",
+  //sleep sXX
+  sleepLog: "sl",
+
+  //user uXX
+  userProfile: "up",
+  userTag: "ut",
+  // Consumption related items
 } as const;
 
 type CloudIdTypesMapNameToPrefix = typeof cloudIdTypesMapNameToPrefix;
@@ -82,10 +87,7 @@ export const cloudTypeIdToUUID = <const T extends CloudIdTypePrefixNames>(
   input: CloudTypeId<T>,
 ) => {
   const id = fromString(input);
-  return {
-    uuid: toUUID(id).toString(),
-    prefix: getType(id),
-  };
+  return { uuid: toUUID(id).toString(), prefix: getType(id) };
 };
 
 export const cloudTypeIdFromUUIDBytes = <
@@ -101,10 +103,7 @@ export const cloudTypeIdToUUIDBytes = <const T extends CloudIdTypePrefixNames>(
   input: CloudTypeId<T>,
 ) => {
   const id = fromString(input);
-  return {
-    uuid: toUUIDBytes(id),
-    prefix: getType(id),
-  };
+  return { uuid: toUUIDBytes(id), prefix: getType(id) };
 };
 
 export const validateCloudTypeId = <const T extends CloudIdTypePrefixNames>(

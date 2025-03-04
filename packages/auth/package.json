@@ -10,7 +10,7 @@
     "auth:generate": "drizzle-kit push"
   },
   "dependencies": {
-    "@augmented/database": "workspace:*",
+    "@augmented/db": "workspace:*",
     "better-auth": "^1.1.7",
     "dotenv": "^16.4.7"
   },

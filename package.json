@@ -2,6 +2,7 @@
   "name": "augmented",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "engines": {
     "node": ">=22.10.0",
     "pnpm": "^10.5.0"
@@ -16,6 +17,10 @@
     "db:studio": "turbo -F @augmented/db studio",
     "dev": "turbo watch dev --continue",
     "dev:next": "turbo watch dev -F @augmented/nextjs...",
+    "dev:mobile": "turbo run dev:mobile -F @augmented/mobile",
+    "dev:android": "turbo run dev:android -F @augmented/mobile",
+    "dev:ios": "turbo run dev:ios -F @augmented/mobile",
+    "dev:cloud": "turbo run dev -F @augmented/cloud",
     "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
     "format:fix": "turbo run format --continue -- --write --cache --cache-location .cache/.prettiercache",
     "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
@@ -24,10 +29,11 @@
     "postinstall": "pnpm lint:ws",
     "typecheck": "turbo run typecheck",
     "ui-add": "turbo run ui-add",
-    "android": "expo run:android",
-    "ios": "expo run:ios"
+    "android": "turbo run android -F @augmented/mobile",
+    "ios": "turbo run ios -F @augmented/mobile"
   },
   "devDependencies": {
+    "@augmented/eslint-config": "workspace:*",
     "@augmented/prettier-config": "workspace:*",
     "@turbo/gen": "^2.4.4",
     "prettier": "catalog:",

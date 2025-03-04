@@ -1,0 +1,18 @@
+# Ignore ESLint configuration files to prevent circular reference errors
+**/.eslintrc.js
+**/.eslintrc.cjs
+**/.eslintrc.json
+**/.eslintrc.yaml
+**/.eslintrc.yml
+
+# Ignore node_modules
+**/node_modules/**
+
+# Ignore build directories
+**/dist/**
+**/.next/**
+**/.turbo/**
+**/.cache/**
+
+# Ignore other common directories
+**/coverage/** 

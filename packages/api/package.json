@@ -1,0 +1,29 @@
+{
+  "name": "@augmented/api",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts",
+    "./routers": "./src/routers/index.ts",
+    "./procedures": "./src/procedures/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@augmented/auth": "workspace:*",
+    "@augmented/db": "workspace:*",
+    "@trpc/server": "^11.0.0-next.319",
+    "better-auth": "^1.1.7",
+    "hono": "^4.1.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@augmented/eslint-config": "workspace:*",
+    "@augmented/tsconfig": "workspace:*",
+    "@types/node": "^20.11.24",
+    "typescript": "catalog:"
+  }
+}

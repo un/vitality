@@ -14,6 +14,26 @@
       "cache": false,
       "persistent": false
     },
+    "dev:mobile": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev:android": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev:ios": {
+      "cache": false,
+      "persistent": true
+    },
+    "android": {
+      "cache": false,
+      "persistent": true
+    },
+    "ios": {
+      "cache": false,
+      "persistent": true
+    },
     "format": {
       "outputs": [".cache/.prettiercache"],
       "outputLogs": "new-only"
@@ -51,7 +71,9 @@
     "AUTH_DISCORD_SECRET",
     "AUTH_REDIRECT_PROXY_URL",
     "AUTH_SECRET",
-    "PORT"
+    "PORT",
+    "API_URL",
+    "EXPO_PUBLIC_API_URL"
   ],
   "globalPassThroughEnv": [
     "NODE_ENV",
@@ -59,6 +81,7 @@
     "VERCEL",
     "VERCEL_ENV",
     "VERCEL_URL",
-    "npm_lifecycle_event"
+    "npm_lifecycle_event",
+    "EXPO_*"
   ]
 }
